@@ -12,6 +12,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js-loading');</script>
+  <style>
+    /* Prevent FOUC for GSAP animated elements */
+    .js-loading .uec-bento-card,
+    .js-loading .uec-section-title,
+    .js-loading .uec-section-desc,
+    .js-loading .uec-grid-three > *,
+    .js-loading .uec-grid-four > *,
+    .js-loading .uec-mentors-grid > *,
+    .js-loading .uec-challenges-stack > *,
+    .js-loading .uec-participant-steps > *,
+    .js-loading .uec-conditions-box > *,
+    .js-loading .uec-faq-categories > *,
+    .js-loading .uec-date-card {
+      visibility: hidden;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,28 +36,29 @@
   <!-- START UMAKER CAMP WRAPPER -->
   <div class="umaker-camp-wrapper">
 
-    <!-- TOP BADGE -->
-    <div class="uec-badge-container">
-      <div class="uec-badge-top">
-        <span>U:maker Academy</span>
-        <span class="uec-badge-divider">×</span>
-        <span>ГО «Кроківня»</span>
-      </div>
-    </div>
-
     <!-- HERO / BENTO GRID -->
     <section class="uec-hero-bento">
       <div class="uec-bento-container">
 
         <!-- Big Blue Bento Card -->
         <div class="uec-bento-card uec-bento-card--large-blue">
+          <h1 class="uec-hero-title">ЛІТО ТВОГО <span class="uec-text-lime uec-swing-word">ВПЛИВУ</span></h1>
           <div>
-            <h1 class="uec-hero-title">ЛІТО ТВОГО <span class="uec-text-lime uec-swing-word">ВПЛИВУ</span></h1>
             <p class="uec-hero-subtitle">Екоінтенсив для підлітків 14–18 років</p>
             <p class="uec-hero-desc">«Розумію, дію, впливаю» — тижні дії, мейкерства та реальних змін у твоєму місті.
               Обирай свій виклик або проходь усі три!</p>
           </div>
           <button class="uec-btn uec-btn--yellow" data-open-popup>Зареєструватися</button>
+        </div>
+
+        <!-- Logos Bento Card -->
+        <div class="uec-bento-card uec-bento-card--logos">
+          <img src="images/logo.U.png" alt="U:maker" class="uec-bento-logo" loading="lazy">
+        </div>
+
+        <!-- Photo Card -->
+        <div class="uec-bento-card uec-bento-card--photo">
+          <img src="images/hero-photo.png" alt="Еко Табір" class="uec-bento-img" loading="lazy">
         </div>
 
         <!-- Small Blue Card -->
@@ -50,32 +68,53 @@
           <p class="uec-bento-text">дружня атмосфера та команда однодумців</p>
         </div>
 
-        <!-- Photo Card -->
-        <div class="uec-bento-card uec-bento-card--photo">
-          <img src="images/hero-photo.png" alt="Еко Табір" class="uec-bento-img" loading="lazy">
-        </div>
-
         <!-- Small Orange Card -->
         <div class="uec-bento-card uec-bento-card--small-orange">
-          <div class="uec-bento-star">✦</div>
-          <p class="uec-bento-text">перші кроки до затребуваної професії та корисне літо</p>
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="uec-bento-star">✦</div>
+            <p class="uec-bento-text">перші кроки до затребуваної професії та корисне літо</p>
+          </div>
         </div>
 
         <!-- Wide Dates Card -->
         <div class="uec-bento-card uec-bento-card--wide-dates">
-          <div class="uec-dates-title">Дати потоків</div>
-          <div class="uec-dates-row">
-            <div class="uec-date-item">
-              <div class="uec-date-num">06–10</div>
-              <div class="uec-date-month">липня</div>
+          <div class="uec-dates-header">
+            <div class="uec-dates-title">Дати потоків</div>
+            <div class="uec-dates-subtitle">Обирай свій виклик або проходь усі три</div>
+          </div>
+
+          <div class="uec-dates-timeline">
+            <!-- Timeline Item 1 -->
+            <div class="uec-date-card" data-course="Trash-to-Cash" data-open-popup>
+              <div class="uec-date-badge">Потік 1</div>
+              <div class="uec-date-time">
+                <span class="uec-date-day">06–10</span>
+                <span class="uec-date-month">липня</span>
+              </div>
+              <div class="uec-date-track">Trash-to-Cash</div>
+              <div class="uec-date-status uec-status-open">Місця є</div>
             </div>
-            <div class="uec-date-item">
-              <div class="uec-date-num">13–17</div>
-              <div class="uec-date-month">липня</div>
+
+            <!-- Timeline Item 2 -->
+            <div class="uec-date-card" data-course="Urban Eco-Hack" data-open-popup>
+              <div class="uec-date-badge">Потік 2</div>
+              <div class="uec-date-time">
+                <span class="uec-date-day">13–17</span>
+                <span class="uec-date-month">липня</span>
+              </div>
+              <div class="uec-date-track">Urban Eco-Hack</div>
+              <div class="uec-date-status uec-status-popular">Популярно</div>
             </div>
-            <div class="uec-date-item">
-              <div class="uec-date-num">20–24</div>
-              <div class="uec-date-month">липня</div>
+
+            <!-- Timeline Item 3 -->
+            <div class="uec-date-card" data-course="Zero Waste Lab" data-open-popup>
+              <div class="uec-date-badge">Потік 3</div>
+              <div class="uec-date-time">
+                <span class="uec-date-day">20–24</span>
+                <span class="uec-date-month">липня</span>
+              </div>
+              <div class="uec-date-track">Zero Waste Lab</div>
+              <div class="uec-date-status uec-status-limited">Мало місць</div>
             </div>
           </div>
         </div>
@@ -144,25 +183,26 @@
     <section class="uec-section uec-section--stats">
       <div class="uec-container">
         <div class="uec-stats-card">
-          <h2 class="uec-stats-title">ЩО, ЯКБИ ТИ МІГ <span class="uec-text-lime-neon">ЗМІНИТИ</span> ЩОСЬ У СВОЄМУ
+          <h2 class="uec-stats-title">ЩО, ЯКБИ ТИ МІГ/МОГЛА <span class="uec-text-lime-neon">ЗМІНИТИ</span> ЩОСЬ У
+            СВОЄМУ
             МІСТІ?</h2>
           <p class="uec-stats-desc">Саме цим ми займемося цього літа. Це час для тих, хто хоче не просто мріяти, а
             діяти.</p>
           <div class="uec-stats-grid">
             <div class="uec-stat-item">
-              <div class="uec-stat-val">3</div>
+              <div class="uec-stat-val"><span class="uec-stat-number" data-target="3">0</span></div>
               <div class="uec-stat-lbl">тижні дії</div>
             </div>
             <div class="uec-stat-item">
-              <div class="uec-stat-val">15</div>
+              <div class="uec-stat-val"><span class="uec-stat-number" data-target="15">0</span></div>
               <div class="uec-stat-lbl">днів практики</div>
             </div>
             <div class="uec-stat-item">
-              <div class="uec-stat-val">8</div>
+              <div class="uec-stat-val"><span class="uec-stat-number" data-target="8">0</span></div>
               <div class="uec-stat-lbl">експертів-менторів</div>
             </div>
             <div class="uec-stat-item">
-              <div class="uec-stat-val">100%</div>
+              <div class="uec-stat-val"><span class="uec-stat-number" data-target="100">0</span>%</div>
               <div class="uec-stat-lbl">реальних проєктів</div>
             </div>
           </div>
@@ -200,95 +240,134 @@
     <section class="uec-section uec-section--mentors">
       <div class="uec-container">
         <h2 class="uec-section-title">КОМАНДА <span class="uec-text-blue">МЕНТОРІВ</span></h2>
-        <div class="uec-mentors-grid">
 
-          <!-- Mentor 1 -->
-          <div class="uec-mentor-card">
-            <img src="images/team-semen.webp" alt="Семен Верхоглядов" class="uec-mentor-img-placeholder" loading="lazy">
-            <div class="uec-mentor-content">
-              <h4 class="uec-mentor-name">Семен Верхоглядов</h4>
-              <div class="uec-mentor-role">Голова ГО, економіст, урбаніст</div>
-              <p class="uec-mentor-desc">Стала мобільність, транспортна інфраструктура, зелена економіка, розвиток
-                громадських просторів.</p>
+        <div class="uec-mentors-container">
+
+          <!-- Block 1: Урбаністика та мобільність -->
+          <div class="uec-mentors-block">
+            <h3 class="uec-mentors-block-title">✦ Урбаністика, урбан-хакінг та мобільність</h3>
+            <div class="uec-mentors-grid">
+
+              <!-- Mentor 1 -->
+              <div class="uec-mentor-card">
+                <img src="images/team-semen.webp" alt="Семен Верхоглядов" class="uec-mentor-img-placeholder"
+                  loading="lazy">
+                <div class="uec-mentor-content">
+                  <h4 class="uec-mentor-name">Семен Верхоглядов</h4>
+                  <div class="uec-mentor-role">Голова ГО, економіст, урбаніст</div>
+                  <p class="uec-mentor-desc">Стала мобільність, транспортна інфраструктура, зелена економіка, розвиток
+                    громадських просторів.</p>
+                  <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> стала мобільність, транспортна
+                    інфраструктура, зелена економіка, розвиток громадських просторів.</p>
+                </div>
+              </div>
+
+              <!-- Mentor 2 -->
+              <div class="uec-mentor-card">
+                <img src="images/team-anton.webp" alt="Антон Волович" class="uec-mentor-img-placeholder" loading="lazy">
+                <div class="uec-mentor-content">
+                  <h4 class="uec-mentor-name">Антон Волович</h4>
+                  <div class="uec-mentor-role">Економіст, урбаніст, дослідник</div>
+                  <p class="uec-mentor-desc">Стала мобільність, безбар'єрність, логістика, розвиток сучасного
+                    електротранспорту.</p>
+                  <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> стала мобільність, безбар'єрність міського
+                    середовища, логістика, розвиток сучасного електротранспорту.</p>
+                </div>
+              </div>
+
+              <!-- Mentor 3 -->
+              <div class="uec-mentor-card">
+                <img src="images/team-tetiana.webp" alt="Тетяна Копайгородська" class="uec-mentor-img-placeholder"
+                  loading="lazy">
+                <div class="uec-mentor-content">
+                  <h4 class="uec-mentor-name">Тетяна Копайгородська</h4>
+                  <div class="uec-mentor-role">Проєктна менеджерка U:maker</div>
+                  <p class="uec-mentor-desc">Освітня менторка та фандрейзерка. Куратор проєктних треків, лідерство та
+                    підприємницьке мислення.</p>
+                  <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> лідерство, проєктний менеджмент,
+                    фандрейзинг, підприємницьке мислення.</p>
+                </div>
+              </div>
+
+              <!-- Mentor 4 -->
+              <div class="uec-mentor-card">
+                <img src="images/team-andriy.webp" alt="Андрій Григірчик" class="uec-mentor-img-placeholder"
+                  loading="lazy">
+                <div class="uec-mentor-content">
+                  <h4 class="uec-mentor-name">Андрій Григірчик</h4>
+                  <div class="uec-mentor-role">Куратор діяльнісних проєктів</div>
+                  <p class="uec-mentor-desc">5 років у молодіжному громадському секторі, психолог, фасилітатор.</p>
+                  <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> командна психологія, фасилітація,
+                    координація діяльності проєктів.</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <!-- Mentor 2 -->
-          <div class="uec-mentor-card">
-            <img src="images/team-anton.webp" alt="Антон Волович" class="uec-mentor-img-placeholder" loading="lazy">
-            <div class="uec-mentor-content">
-              <h4 class="uec-mentor-name">Антон Волович</h4>
-              <div class="uec-mentor-role">Економіст, урбаніст, дослідник</div>
-              <p class="uec-mentor-desc">Стала мобільність, безбар'єрність, логістика, розвиток сучасного
-                електротранспорту.</p>
-            </div>
-          </div>
+          <!-- Block 2: Екологія, бізнес та комунікації -->
+          <div class="uec-mentors-block">
+            <h3 class="uec-mentors-block-title">✦ Екостартапи, рециклінг та комунікації</h3>
+            <div class="uec-mentors-grid">
 
-          <!-- Mentor 3 -->
-          <div class="uec-mentor-card">
-            <img src="images/team-tetiana.webp" alt="Тетяна Копайгородська" class="uec-mentor-img-placeholder"
-              loading="lazy">
-            <div class="uec-mentor-content">
-              <h4 class="uec-mentor-name">Тетяна Копайгородська</h4>
-              <div class="uec-mentor-role">Проєктна менеджерка U:maker</div>
-              <p class="uec-mentor-desc">Освітня менторка та фандрейзерка. Куратор проєктних треків, лідерство та
-                підприємницьке мислення.</p>
-            </div>
-          </div>
+              <!-- Mentor 5 -->
+              <div class="uec-mentor-card">
+                <img src="images/team-iryna.webp" alt="Ірина Бобрик" class="uec-mentor-img-placeholder" loading="lazy">
+                <div class="uec-mentor-content">
+                  <h4 class="uec-mentor-name">Ірина Бобрик</h4>
+                  <div class="uec-mentor-role">Коучиня з самореалізації</div>
+                  <p class="uec-mentor-desc">Ex-топменеджерка в IT з 10-річним досвідом управління командами. Допомагає
+                    знайти «Хто я?» і «Чого хочу?».</p>
+                  <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> пошук покликання, особистий бренд,
+                    самовизначення, IT-менеджмент.</p>
+                </div>
+              </div>
 
-          <!-- Mentor 4 -->
-          <div class="uec-mentor-card">
-            <img src="images/team-andriy.webp" alt="Андрій Григірчик" class="uec-mentor-img-placeholder" loading="lazy">
-            <div class="uec-mentor-content">
-              <h4 class="uec-mentor-name">Андрій Григірчик</h4>
-              <div class="uec-mentor-role">Куратор діяльнісних проєктів</div>
-              <p class="uec-mentor-desc">5 років у молодіжному громадському секторі, психолог, фасилітатор.</p>
-            </div>
-          </div>
+              <!-- Mentor 6 -->
+              <div class="uec-mentor-card">
+                <img src="images/team-oksana.webp" alt="Оксана Прохорова" class="uec-mentor-img-placeholder"
+                  loading="lazy">
+                <div class="uec-mentor-content">
+                  <h4 class="uec-mentor-name">Оксана Прохорова</h4>
+                  <div class="uec-mentor-role">Підприємиця, експертка з біотех</div>
+                  <p class="uec-mentor-desc">Співзасновниця стартапу ReBio. Тестує екорішення та перетворює наукові ідеї
+                    на
+                    бізнес-моделі.</p>
+                  <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> біотехнології, тестування екорішень,
+                    бізнес-моделювання стартапів.</p>
+                </div>
+              </div>
 
-          <!-- Mentor 5 -->
-          <div class="uec-mentor-card">
-            <img src="images/team-iryna.webp" alt="Ірина Бобрик" class="uec-mentor-img-placeholder" loading="lazy">
-            <div class="uec-mentor-content">
-              <h4 class="uec-mentor-name">Ірина Бобрик</h4>
-              <div class="uec-mentor-role">Коучиня з самореалізації</div>
-              <p class="uec-mentor-desc">Ex-топменеджерка в IT з 10-річним досвідом управління командами. Допомагає
-                знайти «Хто я?» і «Чого хочу?».</p>
-            </div>
-          </div>
+              <!-- Mentor 7 -->
+              <div class="uec-mentor-card">
+                <img src="images/team-viktoria.webp" alt="Вікторія Норенко" class="uec-mentor-img-placeholder"
+                  loading="lazy">
+                <div class="uec-mentor-content">
+                  <h4 class="uec-mentor-name">Вікторія Норенко</h4>
+                  <div class="uec-mentor-role">18 років у рециклінгу</div>
+                  <p class="uec-mentor-desc">Створює інноваційні продукти з переробленої сировини. Разом з Оксаною
+                    розвиває
+                    ReBio.</p>
+                  <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> рециклінг, промисловий дизайн, апсайклінг,
+                    кругова економіка.</p>
+                </div>
+              </div>
 
-          <!-- Mentor 6 -->
-          <div class="uec-mentor-card">
-            <img src="images/team-oksana.webp" alt="Оксана Прохорова" class="uec-mentor-img-placeholder" loading="lazy">
-            <div class="uec-mentor-content">
-              <h4 class="uec-mentor-name">Оксана Прохорова</h4>
-              <div class="uec-mentor-role">Підприємиця, експертка з біотех</div>
-              <p class="uec-mentor-desc">Співзасновниця стартапу ReBio. Тестує екорішення та перетворює наукові ідеї на
-                бізнес-моделі.</p>
-            </div>
-          </div>
+              <!-- Mentor 8 -->
+              <div class="uec-mentor-card">
+                <img src="images/team-maryna.webp" alt="Марина Батуринець" class="uec-mentor-img-placeholder"
+                  loading="lazy">
+                <div class="uec-mentor-content">
+                  <h4 class="uec-mentor-name">Марина Батуринець</h4>
+                  <div class="uec-mentor-role">Засновниця школи «Базилік»</div>
+                  <p class="uec-mentor-desc">Експертка з медіа, бренд-стратегій та вірусного контенту. Вчить говорити
+                    так,
+                    щоб чув весь світ.</p>
+                  <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> медіа, бренд-стратегії, вірусний контент,
+                    комунікаційна діяльність.</p>
+                </div>
+              </div>
 
-          <!-- Mentor 7 -->
-          <div class="uec-mentor-card">
-            <img src="images/team-viktoria.webp" alt="Вікторія Норенко" class="uec-mentor-img-placeholder"
-              loading="lazy">
-            <div class="uec-mentor-content">
-              <h4 class="uec-mentor-name">Вікторія Норенко</h4>
-              <div class="uec-mentor-role">18 років у рециклінгу</div>
-              <p class="uec-mentor-desc">Створює інноваційні продукти з переробленої сировини. Разом з Оксаною розвиває
-                ReBio.</p>
-            </div>
-          </div>
-
-          <!-- Mentor 8 -->
-          <div class="uec-mentor-card">
-            <img src="images/team-maryna.webp" alt="Марина Батуринець" class="uec-mentor-img-placeholder"
-              loading="lazy">
-            <div class="uec-mentor-content">
-              <h4 class="uec-mentor-name">Марина Батуринець</h4>
-              <div class="uec-mentor-role">Засновниця школи «Базилік»</div>
-              <p class="uec-mentor-desc">Експертка з медіа, бренд-стратегій та вірусного контенту. Вчить говорити так,
-                щоб чув весь світ.</p>
             </div>
           </div>
 

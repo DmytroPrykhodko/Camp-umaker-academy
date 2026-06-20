@@ -86,14 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Premium Scroll Animations with GSAP ---
     if (typeof gsap !== 'undefined') {
         // 1. Initial Hero Bento Grid Animation (staggered bounce-up)
-        gsap.from('.uec-bento-card', {
-            opacity: 0,
+        gsap.fromTo('.uec-bento-card', {
+            autoAlpha: 0,
             y: 50,
-            scale: 0.96,
+            scale: 0.96
+        }, {
+            autoAlpha: 1,
+            y: 0,
+            scale: 1,
             duration: 1.1,
             stagger: 0.12,
             ease: 'power4.out',
-            clearProps: 'transform,opacity'
+            clearProps: 'transform'
         });
 
         // 2. Parallax effect for the Bento image
@@ -128,18 +132,24 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (title) {
-                tl.from(title, {
-                    opacity: 0,
-                    y: 35,
+                tl.fromTo(title, {
+                    autoAlpha: 0,
+                    y: 35
+                }, {
+                    autoAlpha: 1,
+                    y: 0,
                     duration: 0.7,
                     ease: 'power3.out'
                 });
             }
 
             if (desc) {
-                tl.from(desc, {
-                    opacity: 0,
-                    y: 20,
+                tl.fromTo(desc, {
+                    autoAlpha: 0,
+                    y: 20
+                }, {
+                    autoAlpha: 1,
+                    y: 0,
                     duration: 0.7,
                     ease: 'power3.out'
                 }, '-=0.5');
@@ -152,31 +162,58 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (items.length > 0) {
-                    tl.from(items, {
-                        opacity: 0,
+                    tl.fromTo(items, {
+                        autoAlpha: 0,
                         y: 30,
-                        scale: 0.98,
+                        scale: 0.98
+                    }, {
+                        autoAlpha: 1,
+                        y: 0,
+                        scale: 1,
                         duration: 0.7,
                         stagger: 0.08,
                         ease: 'power3.out',
-                        clearProps: 'transform,opacity'
+                        clearProps: 'transform'
                     }, '-=0.4');
                 }
             });
         });
 
         // 4. Smooth reveal for dates cards inside wide-dates block
-        if (document.querySelector('.uec-date-item')) {
-            gsap.from('.uec-date-item', {
-                opacity: 0,
-                x: -20,
+        if (document.querySelector('.uec-date-card')) {
+            gsap.fromTo('.uec-date-card', {
+                autoAlpha: 0,
+                y: 20
+            }, {
+                autoAlpha: 1,
+                y: 0,
                 duration: 0.8,
-                stagger: 0.1,
+                stagger: 0.12,
                 ease: 'power3.out',
                 scrollTrigger: {
                     trigger: '.uec-bento-card--wide-dates',
                     start: 'top 85%'
                 }
+            });
+        }
+
+        // 5. Stat Counter Count-up Animation
+        if (document.querySelector('.uec-stat-number')) {
+            document.querySelectorAll('.uec-stat-number').forEach(counter => {
+                const targetVal = parseInt(counter.getAttribute('data-target'), 10);
+                gsap.fromTo(counter, 
+                    { textContent: 0 },
+                    {
+                        textContent: targetVal,
+                        duration: 1.8,
+                        ease: 'power2.out',
+                        snap: { textContent: 1 },
+                        scrollTrigger: {
+                            trigger: '.uec-section--stats',
+                            start: 'top 82%'
+                        }
+                    }
+                );
             });
         }
     }
