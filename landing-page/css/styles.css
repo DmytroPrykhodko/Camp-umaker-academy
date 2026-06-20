@@ -384,7 +384,7 @@
 .umaker-camp-wrapper .uec-ticker-wrap {
   overflow: hidden;
   background-color: var(--color-primary-blue);
-  color: var(--color-card-white);
+  color: var(--color-lime-green);
   padding: 26px 0;
   transform: rotate(-2.5deg) scale(1.05);
   margin: 80px -20px 100px;
@@ -396,7 +396,7 @@
 
 .umaker-camp-wrapper .uec-ticker {
   display: inline-flex;
-  animation: ticker-slide 20s linear infinite;
+  animation: ticker-slide 35s linear infinite;
 }
 
 .umaker-camp-wrapper .uec-ticker__item {
@@ -406,7 +406,12 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 0;
+}
+
+.umaker-camp-wrapper .uec-ticker__item span.uec-text-orange {
+  margin: 0 48px;
+  display: inline-block;
 }
 
 @keyframes ticker-slide {
