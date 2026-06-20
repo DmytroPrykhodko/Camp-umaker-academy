@@ -392,82 +392,111 @@
         <div class="uec-challenges-stack">
 
           <!-- Challenge 1: Trash-to-Cash -->
-          <div class="uec-challenge-card uec-challenge-card--blue">
-            <div class="uec-challenge-badge">Виклик 1 · 6-10 липня</div>
-            <h3 class="uec-challenge-name">Trash-to-Cash</h3>
-            <p class="uec-challenge-desc">Створи власний екостартап та запусти його роботу. Сортування — це гроші.
-              З'ясуй, скільки «сміття» треба зібрати, щоб екологічним шляхом заробити на PS5, нові пуфи чи круту
-              піца-паті для друзів.</p>
-
-            <details class="uec-challenge-accordion">
-              <summary class="uec-accordion-summary">Покроковий трек на 5 днів</summary>
-              <div class="uec-accordion-content">
-                <ul>
-                  <li><strong>День 1:</strong> Генерація та ШІ — світові тренди, робота з ChatGPT/Midjourney, формування
-                    команд.</li>
-                  <li><strong>День 2:</strong> Бізнес-моделювання — Lean Canvas, цінність за Остервальдером,
-                    юніт-економіка.</li>
-                  <li><strong>День 3:</strong> Мейкерство та прототип — MVP, брендінг, сайт на Webflow/Tilda.</li>
-                  <li><strong>День 4:</strong> Маркетинг — стратегія просування, віральний контент, живі продажі.</li>
-                  <li><strong>День 5:</strong> Великий пітчинг перед запрошеними експертами та інвесторами.</li>
-                </ul>
+          <div class="uec-flip-card uec-challenge-card" onclick="this.classList.toggle('flipped')">
+            <div class="uec-flip-card-inner">
+              <!-- FRONT -->
+              <div class="uec-flip-card-front uec-challenge-card--blue">
+                <div class="uec-challenge-badge">Виклик 1 · 6-10 липня</div>
+                <h3 class="uec-challenge-name">Trash-to-Cash</h3>
+                <p class="uec-challenge-desc">Створи власний екостартап та запусти його роботу. Сортування — це гроші. З'ясуй, скільки «сміття» треба зібрати, щоб екологічним шляхом заробити на PS5, нові пуфи чи круту піца-паті для друзів.</p>
+                <div class="uec-flip-card-actions">
+                  <button class="uec-btn-text" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.add('flipped')">Програма (5 днів) &rarr;</button>
+                  <button class="uec-btn uec-btn--yellow" onclick="event.stopPropagation();" data-open-popup data-course="Trash-to-Cash">Записатися</button>
+                </div>
               </div>
-            </details>
 
-            <button class="uec-btn uec-btn--yellow" data-open-popup data-course="Trash-to-Cash">Записатися</button>
+              <!-- BACK -->
+              <div class="uec-flip-card-back uec-challenge-card--blue">
+                <div class="uec-back-header">
+                  <h4 class="uec-back-title">Покроковий трек</h4>
+                  <button class="uec-flip-close" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.remove('flipped')">&times;</button>
+                </div>
+                <div class="uec-back-content">
+                  <ul>
+                    <li><strong>День 1:</strong> Генерація та ШІ — світові тренди, робота з ChatGPT/Midjourney, формування команд.</li>
+                    <li><strong>День 2:</strong> Бізнес-моделювання — Lean Canvas, цінність за Остервальдером, юніт-економіка.</li>
+                    <li><strong>День 3:</strong> Мейкерство та прототип — MVP, брендінг, сайт на Webflow/Tilda.</li>
+                    <li><strong>День 4:</strong> Маркетинг — стратегія просування, віральний контент, живі продажі.</li>
+                    <li><strong>День 5:</strong> Великий пітчинг перед запрошеними експертами та інвесторами.</li>
+                  </ul>
+                </div>
+                <div class="uec-flip-card-actions">
+                  <button class="uec-btn uec-btn--yellow" onclick="event.stopPropagation();" data-open-popup data-course="Trash-to-Cash">Записатися</button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Challenge 2: Urban Eco-Hack -->
-          <div class="uec-challenge-card uec-challenge-card--orange">
-            <div class="uec-challenge-badge uec-challenge-badge--white">ВИКЛИК 2 · 13-17 ЛИПНЯ</div>
-            <h3 class="uec-challenge-name">URBAN ECO-HACK</h3>
-            <p class="uec-challenge-desc">Спроєткуй «розумну точку» сортування. Спробуй себе у промисловому дизайні та
-              перетвори звичайні баки на футуристичний арт-об'єкт з інтерактивними елементами чи підсвіткою, біля якого
-              захочеться робити селфі.</p>
-
-            <details class="uec-challenge-accordion">
-              <summary class="uec-accordion-summary">Покроковий трек на 5 днів</summary>
-              <div class="uec-accordion-content">
-                <ul>
-                  <li><strong>День 1:</strong> Урбан-аналітика — дослідження міських потоків, визначення проблемних зон
-                    сортування.</li>
-                  <li><strong>День 2:</strong> Промисловий дизайн — ескізи, 3D-моделювання, ергономіка та доступність.
-                  </li>
-                  <li><strong>День 3:</strong> Конструювання — збірка прототипу зі справжніх матеріалів у мейкерспейсі.
-                  </li>
-                  <li><strong>День 4:</strong> Інтерактив та арт — підсвітка, QR-коди, гейміфікація сортування.</li>
-                  <li><strong>День 5:</strong> Публічна презентація та тестування прототипу на реальних людях.</li>
-                </ul>
+          <div class="uec-flip-card uec-challenge-card" onclick="this.classList.toggle('flipped')">
+            <div class="uec-flip-card-inner">
+              <!-- FRONT -->
+              <div class="uec-flip-card-front uec-challenge-card--orange">
+                <div class="uec-challenge-badge uec-challenge-badge--white">ВИКЛИК 2 · 13-17 ЛИПНЯ</div>
+                <h3 class="uec-challenge-name">URBAN ECO-HACK</h3>
+                <p class="uec-challenge-desc">Спроєткуй «розумну точку» сортування. Спробуй себе у промисловому дизайні та перетвори звичайні баки на футуристичний арт-об'єкт з інтерактивними елементами чи підсвіткою, біля якого захочеться робити селфі.</p>
+                <div class="uec-flip-card-actions">
+                  <button class="uec-btn-text" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.add('flipped')">Програма (5 днів) &rarr;</button>
+                  <button class="uec-btn uec-btn--blue" onclick="event.stopPropagation();" data-open-popup data-course="Urban Eco-Hack">Записатися</button>
+                </div>
               </div>
-            </details>
 
-            <button class="uec-btn uec-btn--blue" data-open-popup data-course="Urban Eco-Hack">Записатися</button>
+              <!-- BACK -->
+              <div class="uec-flip-card-back uec-challenge-card--orange">
+                <div class="uec-back-header">
+                  <h4 class="uec-back-title">Покроковий трек</h4>
+                  <button class="uec-flip-close" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.remove('flipped')">&times;</button>
+                </div>
+                <div class="uec-back-content">
+                  <ul>
+                    <li><strong>День 1:</strong> Урбан-аналітика — дослідження міських потоків, визначення проблемних зон сортування.</li>
+                    <li><strong>День 2:</strong> Промисловий дизайн — ескізи, 3D-моделювання, ергономіка та доступність.</li>
+                    <li><strong>День 3:</strong> Конструювання — збірка прототипу зі справжніх матеріалів у мейкерспейсі.</li>
+                    <li><strong>День 4:</strong> Інтерактив та арт — підсвітка, QR-коди, гейміфікація сортування.</li>
+                    <li><strong>День 5:</strong> Публічна презентація та тестування прототипу на реальних людях.</li>
+                  </ul>
+                </div>
+                <div class="uec-flip-card-actions">
+                  <button class="uec-btn uec-btn--blue" onclick="event.stopPropagation();" data-open-popup data-course="Urban Eco-Hack">Записатися</button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Challenge 3: Zero Waste Lab -->
-          <div class="uec-challenge-card uec-challenge-card--blue">
-            <div class="uec-challenge-badge">ВИКЛИК 3 · 20-24 ЛИПНЯ</div>
-            <h3 class="uec-challenge-name">ZERO WASTE LAB</h3>
-            <p class="uec-challenge-desc">Створи власний лімітований мерч із переробленого пластику на професійному
-              обладнанні. Під час майстер-класу з апсайклінгу ти придумаєш і розробиш моделі унікальних речей: брелоки,
-              значки, елементи для шкільних меблів чи фіджет-антистреси.</p>
-
-            <details class="uec-challenge-accordion">
-              <summary class="uec-accordion-summary">Покроковий трек на 5 днів</summary>
-              <div class="uec-accordion-content">
-                <ul>
-                  <li><strong>День 1:</strong> Матеріалознавство — види пластику, технології переробки, безпека роботи.
-                  </li>
-                  <li><strong>День 2:</strong> Дизайн мерчу — від скетчу до 3D-моделі, вибір форми та функціоналу.</li>
-                  <li><strong>День 3:</strong> Апсайклінг-майстерня — робота на професійному обладнанні, перші зразки.
-                  </li>
-                  <li><strong>День 4:</strong> Брендинг — пакування, лімітована серія, стратегія продажу еко-мерчу.</li>
-                  <li><strong>День 5:</strong> Ярмарок мерчу та підсумковий пітчинг перед журі.</li>
-                </ul>
+          <div class="uec-flip-card uec-challenge-card" onclick="this.classList.toggle('flipped')">
+            <div class="uec-flip-card-inner">
+              <!-- FRONT -->
+              <div class="uec-flip-card-front uec-challenge-card--blue">
+                <div class="uec-challenge-badge">ВИКЛИК 3 · 20-24 ЛИПНЯ</div>
+                <h3 class="uec-challenge-name">ZERO WASTE LAB</h3>
+                <p class="uec-challenge-desc">Створи власний лімітований мерч із переробленого пластику на професійному обладнанні. Під час майстер-класу з апсайклінгу ти придумаєш і розробиш моделі унікальних речей: брелоки, значки, елементи для шкільних меблів чи фіджет-антистреси.</p>
+                <div class="uec-flip-card-actions">
+                  <button class="uec-btn-text" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.add('flipped')">Програма (5 днів) &rarr;</button>
+                  <button class="uec-btn uec-btn--yellow" onclick="event.stopPropagation();" data-open-popup data-course="Zero Waste Lab">Записатися</button>
+                </div>
               </div>
-            </details>
 
-            <button class="uec-btn uec-btn--yellow" data-open-popup data-course="Zero Waste Lab">Записатися</button>
+              <!-- BACK -->
+              <div class="uec-flip-card-back uec-challenge-card--blue">
+                <div class="uec-back-header">
+                  <h4 class="uec-back-title">Покроковий трек</h4>
+                  <button class="uec-flip-close" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.remove('flipped')">&times;</button>
+                </div>
+                <div class="uec-back-content">
+                  <ul>
+                    <li><strong>День 1:</strong> Матеріалознавство — види пластику, технології переробки, безпека роботи.</li>
+                    <li><strong>День 2:</strong> Дизайн мерчу — від скетчу до 3D-моделі, вибір форми та функціоналу.</li>
+                    <li><strong>День 3:</strong> Апсайклінг-майстерня — робота на професійному обладнанні, перші зразки.</li>
+                    <li><strong>День 4:</strong> Брендинг — пакування, лімітована серія, стратегія продажу еко-мерчу.</li>
+                    <li><strong>День 5:</strong> Ярмарок мерчу та підсумковий пітчинг перед журі.</li>
+                  </ul>
+                </div>
+                <div class="uec-flip-card-actions">
+                  <button class="uec-btn uec-btn--yellow" onclick="event.stopPropagation();" data-open-popup data-course="Zero Waste Lab">Записатися</button>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
