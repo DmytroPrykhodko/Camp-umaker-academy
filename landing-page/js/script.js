@@ -209,8 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         ease: 'power2.out',
                         snap: { textContent: 1 },
                         scrollTrigger: {
-                            trigger: '.uec-section--stats',
-                            start: 'top 82%'
+                            trigger: '.uec-stats-grid',
+                            start: 'top 90%'
                         }
                     }
                 );

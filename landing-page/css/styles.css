@@ -746,7 +746,7 @@
 
 .umaker-camp-wrapper .uec-card--orange {
   background-color: var(--color-orange);
-  color: var(--color-card-white);
+  color: var(--color-dark-text);
   border: none;
 }
 
@@ -755,10 +755,10 @@
 }
 
 .umaker-camp-wrapper .uec-card--orange .uec-card-text {
-  color: rgba(255,255,255,0.9);
+  color: var(--color-dark-text);
 }
 .umaker-camp-wrapper .uec-card--orange .uec-card-title {
-  color: var(--color-card-white);
+  color: var(--color-dark-text);
 }
 
 .umaker-camp-wrapper .uec-card--white-bordered {
@@ -867,7 +867,7 @@
 /* === Team / Mentors === */
 .umaker-camp-wrapper .uec-mentors-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-top: 40px;
 }
@@ -875,9 +875,11 @@
 .umaker-camp-wrapper .uec-mentor-card {
   background-color: var(--color-card-white);
   border-radius: var(--border-radius-lg);
-  padding: 24px;
+  padding: 30px 20px;
   border: 1px solid var(--color-gray-border);
   display: flex;
+  flex-direction: column;
+  text-align: center;
   gap: 24px;
   align-items: center;
   transition: var(--transition-spring);
