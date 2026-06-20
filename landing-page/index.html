@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js-loading');</script>
   <style>
@@ -243,104 +244,101 @@
 
         <div class="uec-mentors-container">
 
-          <!-- Single Mentors Grid -->
-          <div class="uec-mentors-grid">
+          <!-- Mentors Swiper Slider -->
+          <div class="swiper uec-mentors-swiper" style="padding-bottom: 50px;">
+            <div class="swiper-wrapper">
 
-            <!-- Mentor 1 -->
-            <div class="uec-mentor-card">
+              <!-- Mentor 1 -->
+              <div class="swiper-slide uec-mentor-card">
               <img src="images/team-semen.webp" alt="Семен Верхоглядов" class="uec-mentor-img-placeholder"
                 loading="lazy">
               <div class="uec-mentor-content">
                 <h4 class="uec-mentor-name">Семен<br>Верхоглядов</h4>
-                <div class="uec-mentor-role">Голова ГО, економіст, урбаніст</div>
-                <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> стала мобільність, транспортна
-                  інфраструктура, зелена економіка, розвиток громадських просторів.</p>
+                <div class="uec-mentor-role">Голова громадської організації, економіст, урбаніст</div>
+                <div class="uec-mentor-focus"><strong>Сфера фокусу:</strong> стала мобільність, транспортна інфраструктура, сталий розвиток громад, зелена економіка, доступність, розвиток громадських просторів.</div>
               </div>
             </div>
 
             <!-- Mentor 2 -->
-            <div class="uec-mentor-card">
+            <div class="swiper-slide uec-mentor-card">
               <img src="images/team-anton.webp" alt="Антон Волович" class="uec-mentor-img-placeholder" loading="lazy">
               <div class="uec-mentor-content">
                 <h4 class="uec-mentor-name">Антон<br>Волович</h4>
                 <div class="uec-mentor-role">Економіст, урбаніст, дослідник</div>
-                <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> стала мобільність, безбар'єрність міського
-                  середовища, логістика, розвиток сучасного електротранспорту.</p>
+                <div class="uec-mentor-focus"><strong>Сфера фокусу:</strong> стала мобільність, комунікаційна діяльність, безбар'єрність міського середовища, логістика, розвиток сучасного електротранспорту.</div>
               </div>
             </div>
 
             <!-- Mentor 3 -->
-            <div class="uec-mentor-card">
+            <div class="swiper-slide uec-mentor-card">
               <img src="images/team-tetiana.webp" alt="Тетяна Копайгородська" class="uec-mentor-img-placeholder"
                 loading="lazy">
               <div class="uec-mentor-content">
                 <h4 class="uec-mentor-name">Тетяна<br>Копайгородська</h4>
-                <div class="uec-mentor-role">Проєктна менеджерка U:maker</div>
-                <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> лідерство, проєктний менеджмент,
-                  фандрейзинг, підприємницьке мислення.</p>
+                <div class="uec-mentor-role">Проєктна менеджерка та експертка з партнерств Академії U:maker</div>
+                <div class="uec-mentor-focus">Освітня менторка та фандрейзерка, яка допомагає підліткам розвивати лідерські якості, комунікацію та підприємницьке мислення. На інтенсиві курує проєктні треки, навчає взаємодії з бізнесом, побудові логістики соціальних стартапів та допомагає учасникам відчути: «Я можу набагато більше, ніж думав».</div>
               </div>
             </div>
 
             <!-- Mentor 4 -->
-            <div class="uec-mentor-card">
+            <div class="swiper-slide uec-mentor-card">
               <img src="images/team-andriy.webp" alt="Андрій Григірчик" class="uec-mentor-img-placeholder"
                 loading="lazy">
               <div class="uec-mentor-content">
                 <h4 class="uec-mentor-name">Андрій<br>Григірчик</h4>
-                <div class="uec-mentor-role">Куратор діяльнісних проєктів</div>
-                <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> командна психологія, фасилітація,
-                  координація діяльності проєктів.</p>
+                <div class="uec-mentor-role">Куратор діяльнісних проєктів в Академії U:maker</div>
+                <div class="uec-mentor-focus">5 років у молодіжному громадському секторі, психолог, фасилітатор.</div>
               </div>
             </div>
 
             <!-- Mentor 5 -->
-            <div class="uec-mentor-card">
+            <div class="swiper-slide uec-mentor-card">
               <img src="images/team-iryna.webp" alt="Ірина Бобрик" class="uec-mentor-img-placeholder" loading="lazy">
               <div class="uec-mentor-content">
                 <h4 class="uec-mentor-name">Ірина<br>Бобрик</h4>
-                <div class="uec-mentor-role">Коучиня з самореалізації</div>
-                <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> пошук покликання, особистий бренд,
-                  самовизначення, IT-менеджмент.</p>
+                <div class="uec-mentor-role">Коучиня з питань самореалізації</div>
+                <div class="uec-mentor-focus">Ex-топменеджерка в ІТ із 10-річним досвідом управління командами, яка пройшла власний шлях від «роблю правильне» до «роблю своє». Тепер допомагає іншим знайти відповіді на головні питання: «Хто я?» і «Чого хочу насправді?».</div>
               </div>
             </div>
 
             <!-- Mentor 6 -->
-            <div class="uec-mentor-card">
+            <div class="swiper-slide uec-mentor-card">
               <img src="images/team-oksana.webp" alt="Оксана Прохорова" class="uec-mentor-img-placeholder"
                 loading="lazy">
               <div class="uec-mentor-content">
                 <h4 class="uec-mentor-name">Оксана<br>Прохорова</h4>
-                <div class="uec-mentor-role">Підприємиця, експертка з біотех</div>
-                <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> біотехнології, тестування екорішень,
-                  бізнес-моделювання стартапів.</p>
+                <div class="uec-mentor-role">Підприємиця, експертка з біологічних технологій та співзасновниця стартапу ReBio</div>
+                <div class="uec-mentor-focus">На інтенсиві допомагає підліткам розбиратися в інноваціях, на практиці тестувати екологічні рішення та перетворювати наукові ідеї на працюючі бізнес-моделі.</div>
               </div>
             </div>
 
             <!-- Mentor 7 -->
-            <div class="uec-mentor-card">
+            <div class="swiper-slide uec-mentor-card">
               <img src="images/team-viktoria.webp" alt="Вікторія Норенко" class="uec-mentor-img-placeholder"
                 loading="lazy">
               <div class="uec-mentor-content">
                 <h4 class="uec-mentor-name">Вікторія<br>Норенко</h4>
-                <div class="uec-mentor-role">18 років у рециклінгу</div>
-                <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> рециклінг, промисловий дизайн, апсайклінг,
-                  кругова економіка.</p>
+                <div class="uec-mentor-role">18 років досвіду в екологічній сфері та рециклінгу</div>
+                <div class="uec-mentor-focus">Створює й розвиває інноваційні продукти та сервіси з переробленої вторинної сировини. Разом із партнеркою Оксаною Прохоровою розвиває стартап ReBio — проєкт із біологічної переробки органічних відходів.</div>
               </div>
             </div>
 
             <!-- Mentor 8 -->
-            <div class="uec-mentor-card">
+            <div class="swiper-slide uec-mentor-card">
               <img src="images/team-maryna.webp" alt="Марина Батуринець" class="uec-mentor-img-placeholder"
                 loading="lazy">
               <div class="uec-mentor-content">
                 <h4 class="uec-mentor-name">Марина<br>Батуринець</h4>
-                <div class="uec-mentor-role">Засновниця школи «Базилік»</div>
-                <p class="uec-mentor-focus"><strong>Сфера фокусу:</strong> медіа, бренд-стратегії, вірусний контент,
-                  комунікаційна діяльність.</p>
+                <div class="uec-mentor-role">Засновниця школи практичних комунікацій «Базилік»</div>
+                <div class="uec-mentor-focus">Експертка з медіа, бренд-стратегій та вірусного контенту. Вчить підлітків говорити так, щоб їх чув увесь світ, створювати потужні інформ-кампанії та будувати особисті бренди.</div>
               </div>
             </div>
 
           </div>
+          <!-- Swiper Pagination & Navigation -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev" style="color: var(--color-primary-blue);"></div>
+          <div class="swiper-button-next" style="color: var(--color-primary-blue);"></div>
         </div>
       </div>
     </section>
@@ -441,8 +439,7 @@
         <div class="uec-eco-skills-wrapper">
 
           <!-- Left: Eco-Influence Lab box -->
-          <div class="uec-eco-bubble uec-animate-float">
-            <div class="uec-cloud-bumps"></div>
+          <div class="uec-eco-bubble">
             <div class="uec-eco-lbl">Наскрізна практика кожного тижня</div>
             <h3 class="uec-eco-title">Eco-Influence Lab</h3>
             <p class="uec-eco-desc">Мало просто створити круті баки — треба надихнути людей ними користуватися. Команда
@@ -453,8 +450,8 @@
           </div>
 
           <!-- Right: Hard Skills -->
-          <div class="uec-hard-skills-container">
-            <h3 class="uec-subsection-title" style="margin-top: 0; margin-bottom: 24px;">Hard Skills, які ти прокачаєш
+          <div class="uec-hard-skills-container" style="display: flex; flex-direction: column; justify-content: center;">
+            <h3 class="uec-subsection-title" style="margin-top: 0; margin-bottom: 16px;">Hard Skills, які ти прокачаєш
             </h3>
             <div class="uec-skills-list">
               <div class="uec-card uec-card--white-bordered">
@@ -766,6 +763,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 
