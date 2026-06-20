@@ -226,7 +226,62 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // 6. Initialize Mentors Swiper
+        // Floating CTA Button Logic
+        const floatingBtn = document.getElementById('floatingBtn');
+        if (floatingBtn && document.querySelector('.uec-section--history') && document.querySelector('.uec-conditions-box')) {
+            ScrollTrigger.create({
+                trigger: '.uec-section--history',
+                start: 'top center',
+                endTrigger: '.uec-conditions-box',
+                end: 'top center',
+                onEnter: () => floatingBtn.classList.add('show'),
+                onLeave: () => floatingBtn.classList.remove('show'),
+                onEnterBack: () => floatingBtn.classList.add('show'),
+                onLeaveBack: () => floatingBtn.classList.remove('show')
+            });
+        }
+
+        // 6. Mentor Bio Modal Logic
+        const bioPopupOverlay = document.getElementById('bioPopupOverlay');
+        const closeBioBtn = document.getElementById('closeBioBtn');
+
+        if (bioPopupOverlay) {
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('uec-read-more-btn')) {
+                    const card = e.target.closest('.uec-mentor-card');
+                    if (card) {
+                        const img = card.querySelector('img').src;
+                        const name = card.querySelector('.uec-mentor-name').innerHTML;
+                        const role = card.querySelector('.uec-mentor-role').innerHTML;
+                        const bioText = card.querySelector('.uec-mentor-text-content').innerHTML;
+
+                        document.getElementById('bio-modal-img').src = img;
+                        document.getElementById('bio-modal-name').innerHTML = name;
+                        document.getElementById('bio-modal-role').innerHTML = role;
+                        document.getElementById('bio-modal-text').innerHTML = bioText;
+
+                        bioPopupOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
+                }
+            });
+
+            if (closeBioBtn) {
+                closeBioBtn.addEventListener('click', () => {
+                    bioPopupOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            bioPopupOverlay.addEventListener('click', (e) => {
+                if (e.target === bioPopupOverlay) {
+                    bioPopupOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+
+        // 7. Initialize Mentors Swiper
         if (typeof Swiper !== 'undefined' && document.querySelector('.uec-mentors-swiper')) {
             new Swiper('.uec-mentors-swiper', {
                 slidesPerView: 1,

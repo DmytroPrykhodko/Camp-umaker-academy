@@ -779,6 +779,14 @@
   margin-bottom: 12px;
 }
 
+@media (min-width: 992px) {
+  .umaker-camp-wrapper .uec-section--history .uec-card-title,
+  .umaker-camp-wrapper .uec-section--what-awaits .uec-card-title,
+  .umaker-camp-wrapper .uec-program-workshops .uec-card-title {
+    min-height: 4rem;
+  }
+}
+
 .umaker-camp-wrapper .uec-card-text {
   font-size: 0.95rem;
   line-height: 1.6;
@@ -974,9 +982,37 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
+}
+
+.umaker-camp-wrapper .uec-mentor-text-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.umaker-camp-wrapper .uec-read-more-btn {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: var(--color-orange);
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.umaker-camp-wrapper .uec-read-more-btn:hover {
+  color: var(--color-primary-blue);
 }
 
 .umaker-camp-wrapper .uec-mentor-focus strong {
@@ -1010,6 +1046,19 @@
   .umaker-camp-wrapper .uec-challenges-stack {
     grid-template-columns: 1fr;
   }
+}
+
+.umaker-camp-wrapper .uec-card {
+  border-radius: var(--border-radius-lg);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.umaker-camp-wrapper .uec-card:hover {
+  transform: translateY(-5px);
 }
 
 .umaker-camp-wrapper .uec-challenge-card {
@@ -1064,6 +1113,29 @@
 .umaker-camp-wrapper .uec-challenge-badge--white {
   background-color: var(--color-card-white);
   color: var(--color-orange);
+}
+
+.umaker-camp-wrapper .uec-pill-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: var(--color-light-gray);
+  color: var(--color-primary-blue);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  align-self: flex-start;
+}
+
+.umaker-camp-wrapper .uec-pill-badge--yellow-text {
+  background-color: rgba(0,0,0,0.2);
+  color: var(--color-lime-green);
+}
+
+.umaker-camp-wrapper .uec-pill-badge--blue-text {
+  background-color: rgba(255,255,255,0.2);
+  color: var(--color-primary-blue);
 }
 
 .umaker-camp-wrapper .uec-challenge-name {
@@ -1194,14 +1266,21 @@
 /* === Eco-Influence Block (Simple Blue Rounded Box) === */
 .umaker-camp-wrapper .uec-eco-bubble {
   background-color: var(--color-primary-blue);
-  border-radius: 60px;
-  padding: 40px;
+  border-radius: var(--border-radius-lg);
+  padding: 48px;
   color: var(--color-card-white);
-  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(38, 1, 254, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.umaker-camp-wrapper .uec-eco-bubble:hover {
+  transform: translateY(-5px);
 }
 
 .umaker-camp-wrapper .uec-eco-lbl {
@@ -1323,24 +1402,6 @@
   position: relative;
 }
 
-/* Dotted connector line between steps */
-.umaker-camp-wrapper .uec-participant-steps .uec-card-step {
-  position: relative;
-}
-.umaker-camp-wrapper .uec-participant-steps .uec-card-step::after {
-  content: '';
-  position: absolute;
-  top: 58px; /* middle of the circle */
-  right: -10px;
-  width: calc(100% - 80px);
-  height: 0;
-  border-top: 3px dashed rgba(38, 1, 254, 0.25);
-  transform: translateX(50%);
-}
-.umaker-camp-wrapper .uec-participant-steps .uec-card-step:last-child::after {
-  display: none;
-}
-
 .umaker-camp-wrapper .uec-card-step {
   align-items: center;
   text-align: center;
@@ -1371,9 +1432,6 @@
 }
 
 @media (max-width: 640px) {
-  .umaker-camp-wrapper .uec-participant-steps .uec-card-step::after {
-    display: none;
-  }
 }
 
 /* === Conditions / Pricing Block === */
@@ -1445,16 +1503,77 @@
   color: var(--color-orange);
 }
 
+.umaker-camp-wrapper .uec-cond-right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.umaker-camp-wrapper .uec-cond-right-col .uec-cond-list-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.umaker-camp-wrapper .uec-cond-right-col .uec-cond-list-col ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.umaker-camp-wrapper .uec-cond-right-col .uec-register-cta-wrap {
+  width: 100%;
+}
+
 .umaker-camp-wrapper .uec-register-cta-wrap {
   margin-top: 48px;
   display: flex;
   justify-content: center;
 }
 
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(200, 255, 0, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(200, 255, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(200, 255, 0, 0); }
+}
+
+.umaker-camp-wrapper .uec-btn-pulse {
+  animation: pulseGlow 2s infinite;
+}
+
+.umaker-camp-wrapper .uec-floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--color-lime-green);
+  color: var(--color-dark-text);
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(200, 255, 0, 0.4);
+}
+
+.umaker-camp-wrapper .uec-floating-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.umaker-camp-wrapper .uec-floating-btn:hover {
+  transform: scale(1.05);
+  background-color: #b3e600;
+}
+
 @media (max-width: 991px) {
   .umaker-camp-wrapper .uec-conditions-main {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
   }
 }
 
@@ -1556,4 +1675,47 @@
   border-color: var(--color-primary-blue);
   background-color: var(--color-card-white);
   box-shadow: 0 0 0 4px rgba(38, 1, 254, 0.08);
+}
+
+/* === Mentor Bio Popup Modal === */
+.umaker-camp-wrapper .camp-bio-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.umaker-camp-wrapper .camp-bio-popup img {
+  width: 140px;
+  height: 140px;
+  border-radius: var(--border-radius-sm);
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.umaker-camp-wrapper .camp-bio-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.umaker-camp-wrapper .camp-bio-role {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.umaker-camp-wrapper .camp-bio-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-dark-text);
+  text-align: left;
+  background-color: rgba(38, 1, 254, 0.05);
+  padding: 20px;
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--color-primary-blue);
+  width: 100%;
 }
