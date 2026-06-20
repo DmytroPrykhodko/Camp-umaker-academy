@@ -88,7 +88,6 @@
   color: var(--color-orange);
 }
 
-/* === Buttons === */
 .umaker-camp-wrapper .uec-btn {
   display: inline-flex;
   align-items: center;
@@ -100,9 +99,11 @@
   border: none;
   cursor: pointer;
   font-family: var(--font-family);
-  transition: var(--transition);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
   text-decoration: none;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .umaker-camp-wrapper .uec-btn--yellow {
@@ -111,8 +112,8 @@
 }
 
 .umaker-camp-wrapper .uec-btn--yellow:hover {
-  transform: scale(0.97);
-  box-shadow: 0 4px 20px rgba(204, 255, 0, 0.3);
+  transform: scale(1.04) rotate(-3deg);
+  box-shadow: 0 8px 25px rgba(204, 255, 0, 0.35);
 }
 
 .umaker-camp-wrapper .uec-btn--blue {
@@ -121,8 +122,8 @@
 }
 
 .umaker-camp-wrapper .uec-btn--blue:hover {
-  transform: scale(0.97);
-  box-shadow: 0 4px 20px rgba(38, 1, 254, 0.25);
+  transform: scale(1.04) rotate(-3deg);
+  box-shadow: 0 8px 25px rgba(38, 1, 254, 0.3);
 }
 
 .umaker-camp-wrapper .uec-btn--lg {
@@ -180,17 +181,20 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--large-blue {
-  grid-column: span 8;
+  grid-column: span 6;
   grid-row: span 2;
   background-color: var(--color-primary-blue);
   color: var(--color-card-white);
-  min-height: 420px;
+  min-height: 440px;
 }
 
-.umaker-camp-wrapper .uec-bento-card--large-blue h1 {
-  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+.umaker-camp-wrapper .uec-hero-title {
+  font-size: clamp(2.6rem, 5.8vw, 4.3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
   color: var(--color-card-white);
-  line-height: 1.05;
 }
 
 .umaker-camp-wrapper .uec-hero-subtitle {
@@ -213,12 +217,13 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--small-blue {
-  grid-column: span 4;
+  grid-column: span 3;
   background-color: var(--color-primary-blue);
   color: var(--color-card-white);
   justify-content: center;
   align-items: center;
   text-align: center;
+  min-height: 210px;
 }
 
 .umaker-camp-wrapper .uec-bento-age {
@@ -235,12 +240,13 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--small-orange {
-  grid-column: span 4;
+  grid-column: span 3;
   background-color: var(--color-orange);
   color: var(--color-card-white);
   justify-content: center;
   align-items: center;
   text-align: center;
+  min-height: 210px;
 }
 
 .umaker-camp-wrapper .uec-bento-star {
@@ -256,47 +262,70 @@
   color: var(--color-card-white);
 }
 
-.umaker-camp-wrapper .uec-bento-card--wide-dates {
-  grid-column: span 8;
-  background-color: var(--color-light-gray);
+.umaker-camp-wrapper .uec-bento-card--photo {
+  grid-column: span 3;
+  grid-row: span 2;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  min-height: 440px;
   border: 1px solid var(--color-gray-border);
-  padding: 30px 36px;
+}
+
+.umaker-camp-wrapper .uec-bento-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.umaker-camp-wrapper .uec-bento-card--wide-dates {
+  grid-column: span 12;
+  background-color: var(--color-card-white);
+  border: 1.5px solid var(--color-dark-text);
+  padding: 36px 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: auto;
 }
 
 .umaker-camp-wrapper .uec-dates-title {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--color-primary-blue);
-  margin-bottom: 20px;
+  color: var(--color-dark-text);
+  margin-bottom: 0;
+  letter-spacing: -0.02em;
 }
 
-.umaker-camp-wrapper .uec-dates-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.umaker-camp-wrapper .uec-dates-row {
+  display: flex;
+  gap: 56px;
 }
 
-.umaker-camp-wrapper .uec-date-col {
-  background-color: var(--color-card-white);
-  border-radius: var(--border-radius-sm);
-  padding: 16px;
-  text-align: center;
-  border: 1px solid var(--color-gray-border);
+.umaker-camp-wrapper .uec-date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .umaker-camp-wrapper .uec-date-num {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 800;
-  color: var(--color-dark-text);
+  color: var(--color-primary-blue);
   line-height: 1;
 }
 
 .umaker-camp-wrapper .uec-date-month {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-orange);
   margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 991px) {
@@ -309,8 +338,22 @@
   .umaker-camp-wrapper .uec-bento-card--small-orange {
     grid-column: span 6;
   }
+  .umaker-camp-wrapper .uec-bento-card--photo {
+    grid-column: span 12;
+    grid-row: span 1;
+    min-height: 280px;
+  }
   .umaker-camp-wrapper .uec-bento-card--wide-dates {
     grid-column: span 12;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 20px;
+  }
+  .umaker-camp-wrapper .uec-dates-row {
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
   }
 }
 
@@ -319,8 +362,9 @@
   .umaker-camp-wrapper .uec-bento-card--small-orange {
     grid-column: span 12;
   }
-  .umaker-camp-wrapper .uec-dates-grid {
-    grid-template-columns: 1fr;
+  .umaker-camp-wrapper .uec-dates-row {
+    flex-direction: column;
+    gap: 16px;
   }
 }
 
@@ -329,23 +373,28 @@
   overflow: hidden;
   background-color: var(--color-primary-blue);
   color: var(--color-card-white);
-  padding: 22px 0;
-  transform: rotate(-1.5deg) scale(1.03);
-  margin: 60px -20px 80px;
+  padding: 26px 0;
+  transform: rotate(-2.5deg) scale(1.05);
+  margin: 80px -20px 100px;
   white-space: nowrap;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .umaker-camp-wrapper .uec-ticker {
   display: inline-flex;
-  animation: ticker-slide 25s linear infinite;
+  animation: ticker-slide 20s linear infinite;
 }
 
 .umaker-camp-wrapper .uec-ticker__item {
-  font-weight: 800;
-  font-size: 1.3rem;
-  letter-spacing: 0.08em;
+  font-weight: 850;
+  font-size: 1.7rem;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 @keyframes ticker-slide {
