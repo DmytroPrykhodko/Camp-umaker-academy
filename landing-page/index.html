@@ -803,7 +803,7 @@
     <div class="camp-popup-overlay" id="campRegistrationPopup">
       <div class="camp-popup" data-lenis-prevent>
         <button class="camp-popup-close">&times;</button>
-        <h3 class="text-primary uec-text-blue" style="margin-bottom: 32px;">Реєстрація на екоінтенсив</h3>
+        <h3 class="text-primary uec-text-blue" style="margin-bottom: 16px; font-size: 1.5rem; text-align: center;">Реєстрація на екоінтенсив</h3>
 
         <form id="campRegistrationForm" class="uec-modern-form">
           <div class="camp-form-group">
@@ -825,14 +825,13 @@
             </div>
           </div>
 
-          <div class="camp-form-group">
-            <label for="campComments">КОМЕНТАР</label>
-            <textarea id="campComments" name="comments" class="camp-form-control" rows="2"
-              placeholder="Ваш коментар..."></textarea>
+          <div class="camp-form-group" style="margin-bottom: 12px;">
+            <label for="campComments" style="margin-bottom: 4px;">КОМЕНТАР</label>
+            <input type="text" id="campComments" name="comments" class="camp-form-control" placeholder="Ваш коментар (необов'язково)">
           </div>
 
-          <div class="camp-form-group">
-            <label>ОБЕРИ НАПРЯМ</label>
+          <div class="camp-form-group" style="margin-bottom: 12px;">
+            <label style="margin-bottom: 6px;">ОБЕРИ НАПРЯМ</label>
             <div class="uec-track-selection">
               <label class="uec-track-card">
                 <input type="checkbox" name="course[]" value="Trash-to-Cash">
