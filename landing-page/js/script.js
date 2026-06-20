@@ -4,30 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.registerPlugin(ScrollTrigger);
     }
 
-    // Initialize Lenis smooth scroll
-    let lenis;
-    if (typeof Lenis !== 'undefined') {
-        lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            direction: 'vertical',
-            gestureDirection: 'vertical',
-            smooth: true,
-            mouseMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
-            infinite: false,
-        });
-
-        // Sync ScrollTrigger with Lenis
-        lenis.on('scroll', ScrollTrigger.update);
-
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000);
-        });
-
-        gsap.ticker.lagSmoothing(0);
-    }
+    let lenis; // Disabled to prevent conflicts with WordPress scrolling
 
     // Popup Logic
     const popupOverlay = document.getElementById('campRegistrationPopup');
@@ -312,23 +289,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+        // 8. Tab Switching Logic for Challenges Section
+        const tabBtns = document.querySelectorAll('.uec-tabs-nav .uec-tab-btn');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const currentBtn = e.currentTarget;
+                const tabId = currentBtn.getAttribute('data-tab-target');
+                const tabsContainer = currentBtn.closest('.uec-tabs-wrapper');
+                if (!tabsContainer || !tabId) return;
+
+                const tabPanes = tabsContainer.querySelectorAll('.uec-tab-content');
+                const siblingBtns = tabsContainer.querySelectorAll('.uec-tabs-nav .uec-tab-btn');
+
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                siblingBtns.forEach(b => b.classList.remove('active'));
+
+                const targetPane = tabsContainer.querySelector('#' + tabId);
+                if (targetPane) targetPane.classList.add('active');
+                currentBtn.classList.add('active');
+            });
+        });
     }
 });
-
-// Tab Switching Logic for Challenges Section
-window.switchUecTab = function(evt, tabId) {
-    const tabsContainer = evt.currentTarget.closest('.uec-tabs-wrapper');
-    const tabPanes = tabsContainer.querySelectorAll('.uec-tab-content');
-    const tabBtns = tabsContainer.querySelectorAll('.uec-tabs-nav .uec-tab-btn');
-
-    tabPanes.forEach(pane => {
-        pane.classList.remove('active');
-    });
-
-    tabBtns.forEach(btn => {
-        btn.classList.remove('active');
-    });
-
-    tabsContainer.querySelector('#' + tabId).classList.add('active');
-    evt.currentTarget.classList.add('active');
-};
