@@ -304,3 +304,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// Tab Switching Logic for Challenges Section
+window.switchUecTab = function(evt, tabId) {
+    const tabsContainer = evt.currentTarget.closest('.uec-tabs-wrapper');
+    const tabPanes = tabsContainer.querySelectorAll('.uec-tab-content');
+    const tabBtns = tabsContainer.querySelectorAll('.uec-tabs-nav .uec-tab-btn');
+
+    tabPanes.forEach(pane => {
+        pane.classList.remove('active');
+    });
+
+    tabBtns.forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    tabsContainer.querySelector('#' + tabId).classList.add('active');
+    evt.currentTarget.classList.add('active');
+};

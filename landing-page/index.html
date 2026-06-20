@@ -389,30 +389,29 @@
       <div class="uec-container">
         <h2 class="uec-section-title">3 ТИЖНІ — 3 ВИКЛИКИ</h2>
 
-        <div class="uec-challenges-stack">
+        <div class="uec-tabs-wrapper">
+          <!-- Tabs Navigation -->
+          <div class="uec-tabs-nav">
+            <button class="uec-tab-btn active" onclick="switchUecTab(event, 'challenge-tab-1')">Trash-to-Cash</button>
+            <button class="uec-tab-btn" onclick="switchUecTab(event, 'challenge-tab-2')">Urban Eco-Hack</button>
+            <button class="uec-tab-btn" onclick="switchUecTab(event, 'challenge-tab-3')">Zero Waste Lab</button>
+          </div>
 
-          <!-- Challenge 1: Trash-to-Cash -->
-          <div class="uec-flip-card uec-challenge-card" onclick="this.classList.toggle('flipped')">
-            <div class="uec-flip-card-inner">
-              <!-- FRONT -->
-              <div class="uec-flip-card-front uec-challenge-card--blue">
-                <div class="uec-challenge-badge">Виклик 1 · 6-10 липня</div>
-                <h3 class="uec-challenge-name">Trash-to-Cash</h3>
-                <p class="uec-challenge-desc">Створи власний екостартап та запусти його роботу. Сортування — це гроші. З'ясуй, скільки «сміття» треба зібрати, щоб екологічним шляхом заробити на PS5, нові пуфи чи круту піца-паті для друзів.</p>
-                <div class="uec-flip-card-actions">
-                  <button class="uec-btn-text" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.add('flipped')">Програма (5 днів) &rarr;</button>
-                  <button class="uec-btn uec-btn--yellow" onclick="event.stopPropagation();" data-open-popup data-course="Trash-to-Cash">Записатися</button>
+          <div class="uec-tabs-content-container">
+            <!-- Tab Content 1 -->
+            <div id="challenge-tab-1" class="uec-tab-content active">
+              <div class="uec-tab-grid">
+                <div class="uec-tab-desc-panel uec-challenge-card--blue">
+                  <div class="uec-challenge-badge">Виклик 1 · 6-10 липня</div>
+                  <h3 class="uec-challenge-name">Trash-to-Cash</h3>
+                  <p class="uec-challenge-desc">Створи власний екостартап та запусти його роботу. Сортування — це гроші. З'ясуй, скільки «сміття» треба зібрати, щоб екологічним шляхом заробити на PS5, нові пуфи чи круту піца-паті для друзів.</p>
+                  <div class="uec-tab-actions">
+                    <button class="uec-btn uec-btn--yellow" data-open-popup data-course="Trash-to-Cash">Записатися</button>
+                  </div>
                 </div>
-              </div>
-
-              <!-- BACK -->
-              <div class="uec-flip-card-back uec-challenge-card--blue">
-                <div class="uec-back-header">
-                  <h4 class="uec-back-title">Покроковий трек</h4>
-                  <button class="uec-flip-close" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.remove('flipped')">&times;</button>
-                </div>
-                <div class="uec-back-content">
-                  <ul>
+                <div class="uec-tab-program-panel">
+                  <h4 class="uec-tab-program-title">Покроковий трек</h4>
+                  <ul class="uec-tab-program-list">
                     <li><strong>День 1:</strong> Генерація та ШІ — світові тренди, робота з ChatGPT/Midjourney, формування команд.</li>
                     <li><strong>День 2:</strong> Бізнес-моделювання — Lean Canvas, цінність за Остервальдером, юніт-економіка.</li>
                     <li><strong>День 3:</strong> Мейкерство та прототип — MVP, брендінг, сайт на Webflow/Tilda.</li>
@@ -420,35 +419,23 @@
                     <li><strong>День 5:</strong> Великий пітчинг перед запрошеними експертами та інвесторами.</li>
                   </ul>
                 </div>
-                <div class="uec-flip-card-actions">
-                  <button class="uec-btn uec-btn--yellow" onclick="event.stopPropagation();" data-open-popup data-course="Trash-to-Cash">Записатися</button>
-                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Challenge 2: Urban Eco-Hack -->
-          <div class="uec-flip-card uec-challenge-card" onclick="this.classList.toggle('flipped')">
-            <div class="uec-flip-card-inner">
-              <!-- FRONT -->
-              <div class="uec-flip-card-front uec-challenge-card--orange">
-                <div class="uec-challenge-badge uec-challenge-badge--white">ВИКЛИК 2 · 13-17 ЛИПНЯ</div>
-                <h3 class="uec-challenge-name">URBAN ECO-HACK</h3>
-                <p class="uec-challenge-desc">Спроєткуй «розумну точку» сортування. Спробуй себе у промисловому дизайні та перетвори звичайні баки на футуристичний арт-об'єкт з інтерактивними елементами чи підсвіткою, біля якого захочеться робити селфі.</p>
-                <div class="uec-flip-card-actions">
-                  <button class="uec-btn-text" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.add('flipped')">Програма (5 днів) &rarr;</button>
-                  <button class="uec-btn uec-btn--blue" onclick="event.stopPropagation();" data-open-popup data-course="Urban Eco-Hack">Записатися</button>
+            <!-- Tab Content 2 -->
+            <div id="challenge-tab-2" class="uec-tab-content">
+              <div class="uec-tab-grid">
+                <div class="uec-tab-desc-panel uec-challenge-card--orange">
+                  <div class="uec-challenge-badge uec-challenge-badge--white">ВИКЛИК 2 · 13-17 ЛИПНЯ</div>
+                  <h3 class="uec-challenge-name">URBAN ECO-HACK</h3>
+                  <p class="uec-challenge-desc">Спроєткуй «розумну точку» сортування. Спробуй себе у промисловому дизайні та перетвори звичайні баки на футуристичний арт-об'єкт з інтерактивними елементами чи підсвіткою, біля якого захочеться робити селфі.</p>
+                  <div class="uec-tab-actions">
+                    <button class="uec-btn uec-btn--blue" data-open-popup data-course="Urban Eco-Hack">Записатися</button>
+                  </div>
                 </div>
-              </div>
-
-              <!-- BACK -->
-              <div class="uec-flip-card-back uec-challenge-card--orange">
-                <div class="uec-back-header">
-                  <h4 class="uec-back-title">Покроковий трек</h4>
-                  <button class="uec-flip-close" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.remove('flipped')">&times;</button>
-                </div>
-                <div class="uec-back-content">
-                  <ul>
+                <div class="uec-tab-program-panel">
+                  <h4 class="uec-tab-program-title">Покроковий трек</h4>
+                  <ul class="uec-tab-program-list">
                     <li><strong>День 1:</strong> Урбан-аналітика — дослідження міських потоків, визначення проблемних зон сортування.</li>
                     <li><strong>День 2:</strong> Промисловий дизайн — ескізи, 3D-моделювання, ергономіка та доступність.</li>
                     <li><strong>День 3:</strong> Конструювання — збірка прототипу зі справжніх матеріалів у мейкерспейсі.</li>
@@ -456,35 +443,23 @@
                     <li><strong>День 5:</strong> Публічна презентація та тестування прототипу на реальних людях.</li>
                   </ul>
                 </div>
-                <div class="uec-flip-card-actions">
-                  <button class="uec-btn uec-btn--blue" onclick="event.stopPropagation();" data-open-popup data-course="Urban Eco-Hack">Записатися</button>
-                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Challenge 3: Zero Waste Lab -->
-          <div class="uec-flip-card uec-challenge-card" onclick="this.classList.toggle('flipped')">
-            <div class="uec-flip-card-inner">
-              <!-- FRONT -->
-              <div class="uec-flip-card-front uec-challenge-card--blue">
-                <div class="uec-challenge-badge">ВИКЛИК 3 · 20-24 ЛИПНЯ</div>
-                <h3 class="uec-challenge-name">ZERO WASTE LAB</h3>
-                <p class="uec-challenge-desc">Створи власний лімітований мерч із переробленого пластику на професійному обладнанні. Під час майстер-класу з апсайклінгу ти придумаєш і розробиш моделі унікальних речей: брелоки, значки, елементи для шкільних меблів чи фіджет-антистреси.</p>
-                <div class="uec-flip-card-actions">
-                  <button class="uec-btn-text" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.add('flipped')">Програма (5 днів) &rarr;</button>
-                  <button class="uec-btn uec-btn--yellow" onclick="event.stopPropagation();" data-open-popup data-course="Zero Waste Lab">Записатися</button>
+            <!-- Tab Content 3 -->
+            <div id="challenge-tab-3" class="uec-tab-content">
+              <div class="uec-tab-grid">
+                <div class="uec-tab-desc-panel uec-challenge-card--blue">
+                  <div class="uec-challenge-badge">ВИКЛИК 3 · 20-24 ЛИПНЯ</div>
+                  <h3 class="uec-challenge-name">ZERO WASTE LAB</h3>
+                  <p class="uec-challenge-desc">Створи власний лімітований мерч із переробленого пластику на професійному обладнанні. Під час майстер-класу з апсайклінгу ти придумаєш і розробиш моделі унікальних речей: брелоки, значки, елементи для шкільних меблів чи фіджет-антистреси.</p>
+                  <div class="uec-tab-actions">
+                    <button class="uec-btn uec-btn--yellow" data-open-popup data-course="Zero Waste Lab">Записатися</button>
+                  </div>
                 </div>
-              </div>
-
-              <!-- BACK -->
-              <div class="uec-flip-card-back uec-challenge-card--blue">
-                <div class="uec-back-header">
-                  <h4 class="uec-back-title">Покроковий трек</h4>
-                  <button class="uec-flip-close" onclick="event.stopPropagation(); this.closest('.uec-flip-card').classList.remove('flipped')">&times;</button>
-                </div>
-                <div class="uec-back-content">
-                  <ul>
+                <div class="uec-tab-program-panel">
+                  <h4 class="uec-tab-program-title">Покроковий трек</h4>
+                  <ul class="uec-tab-program-list">
                     <li><strong>День 1:</strong> Матеріалознавство — види пластику, технології переробки, безпека роботи.</li>
                     <li><strong>День 2:</strong> Дизайн мерчу — від скетчу до 3D-моделі, вибір форми та функціоналу.</li>
                     <li><strong>День 3:</strong> Апсайклінг-майстерня — робота на професійному обладнанні, перші зразки.</li>
@@ -492,13 +467,9 @@
                     <li><strong>День 5:</strong> Ярмарок мерчу та підсумковий пітчинг перед журі.</li>
                   </ul>
                 </div>
-                <div class="uec-flip-card-actions">
-                  <button class="uec-btn uec-btn--yellow" onclick="event.stopPropagation();" data-open-popup data-course="Zero Waste Lab">Записатися</button>
-                </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -813,56 +784,65 @@
       <div class="camp-popup">
         <button class="camp-popup-close">&times;</button>
         <h3 class="text-primary mb-sm">Реєстрація на екоінтенсив</h3>
-        <p style="margin-bottom: 24px; font-size: 0.95rem; color: #555;">Заповни форму — ми зв'яжемося з тобою
-          найближчим часом.</p>
+        <p style="margin-bottom: 24px; font-size: 0.95rem; color: #555;">Заповни форму — ми зв'яжемося з тобою найближчим часом.</p>
 
-        <form id="campRegistrationForm">
+        <form id="campRegistrationForm" class="uec-modern-form">
           <div class="camp-form-group">
-            <label for="campName">Ім'я дитини</label>
-            <input type="text" id="campName" name="name" class="camp-form-control" required placeholder="Ваше ім'я">
+            <label for="campName">ПІБ</label>
+            <input type="text" id="campName" name="name" class="camp-form-control" required placeholder="Прізвище ім'я по батькові">
+          </div>
+
+          <div class="uec-form-row">
+            <div class="camp-form-group uec-col-half">
+              <label for="campEmail">E-MAIL</label>
+              <input type="email" id="campEmail" name="email" class="camp-form-control" required placeholder="E-mail">
+            </div>
+            <div class="camp-form-group uec-col-half">
+              <label for="campPhone">ТЕЛЕФОН</label>
+              <input type="tel" id="campPhone" name="phone" class="camp-form-control" required placeholder="+38 099 111 11 11">
+            </div>
           </div>
 
           <div class="camp-form-group">
-            <label for="campAge">Вік дитини</label>
-            <input type="number" id="campAge" name="age" class="camp-form-control" required min="10" max="22"
-              placeholder="Наприклад: 15">
+            <label for="campComments">КОМЕНТАР</label>
+            <textarea id="campComments" name="comments" class="camp-form-control" rows="2" placeholder="Ваш коментар..."></textarea>
           </div>
 
           <div class="camp-form-group">
-            <label for="campPhone">Номер телефону дитини</label>
-            <input type="tel" id="campPhone" name="phone" class="camp-form-control" required placeholder="+380">
+            <label>ОБЕРИ НАПРЯМ</label>
+            <div class="uec-track-selection">
+              <label class="uec-track-card">
+                <input type="checkbox" name="course[]" value="Trash-to-Cash">
+                <div class="uec-track-card-inner">
+                  <div class="uec-track-icon">💸</div>
+                  <div class="uec-track-title">Trash-to-Cash</div>
+                  <div class="uec-track-dates">6 – 10 липня</div>
+                </div>
+              </label>
+              
+              <label class="uec-track-card">
+                <input type="checkbox" name="course[]" value="Urban Eco-Hack">
+                <div class="uec-track-card-inner">
+                  <div class="uec-track-icon">🎨</div>
+                  <div class="uec-track-title">Urban Eco-Hack</div>
+                  <div class="uec-track-dates">13 – 17 липня</div>
+                </div>
+              </label>
+
+              <label class="uec-track-card">
+                <input type="checkbox" name="course[]" value="Zero Waste Lab">
+                <div class="uec-track-card-inner">
+                  <div class="uec-track-icon">⚙️</div>
+                  <div class="uec-track-title">Zero Waste Lab</div>
+                  <div class="uec-track-dates">20 – 24 липня</div>
+                </div>
+              </label>
+            </div>
           </div>
 
-          <div class="camp-form-group">
-            <label for="campParentName">Ім'я одного з батьків</label>
-            <input type="text" id="campParentName" name="parent_name" class="camp-form-control" required
-              placeholder="Ім'я та прізвище">
+          <div class="uec-form-submit-wrap">
+            <button type="submit" class="uec-btn uec-btn--yellow uec-btn-submit-modern">Забронювати місце</button>
           </div>
-
-          <div class="camp-form-group">
-            <label for="campParentPhone">Номер телефону батьків</label>
-            <input type="tel" id="campParentPhone" name="parent_phone" class="camp-form-control" required
-              placeholder="+380">
-          </div>
-
-          <div class="camp-form-group">
-            <label for="campCourse">Оберіть виклик</label>
-            <select id="campCourse" name="course" class="camp-form-control" required>
-              <option value="Всі три виклики">Всі три виклики (повний курс)</option>
-              <option value="Trash-to-Cash">Trash-to-Cash (6–10 липня)</option>
-              <option value="Urban Eco-Hack">Urban Eco-Hack (13–17 липня)</option>
-              <option value="Zero Waste Lab">Zero Waste Lab (20–24 липня)</option>
-            </select>
-          </div>
-
-          <div class="camp-form-group">
-            <label for="campComments">Особливості (дієта тощо)</label>
-            <textarea id="campComments" name="comments" class="camp-form-control" rows="2"
-              placeholder="Наприклад: вегетаріанське меню"></textarea>
-          </div>
-
-          <button type="submit" class="uec-btn uec-btn--yellow"
-            style="width: 100%; margin-top: 16px; font-size: 1.1rem; padding: 18px;">Відправити заявку</button>
         </form>
       </div>
     </div>

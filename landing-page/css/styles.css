@@ -1841,6 +1841,255 @@
   color: var(--color-lime-green);
 }
 
-.umaker-camp-wrapper .uec-section--challenges .uec-container {
-  max-width: 1360px;
+
+
+/* === Tabs for Challenges === */
+.umaker-camp-wrapper .uec-tabs-wrapper {
+  margin-top: 45px;
 }
+
+.umaker-camp-wrapper .uec-tabs-nav {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.umaker-camp-wrapper .uec-tab-btn {
+  background: transparent;
+  border: 2px solid var(--color-primary-blue);
+  color: var(--color-primary-blue);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.umaker-camp-wrapper .uec-tab-btn:hover {
+  background: rgba(38, 1, 254, 0.1);
+}
+
+.umaker-camp-wrapper .uec-tab-btn.active {
+  background: var(--color-primary-blue);
+  color: var(--color-card-white);
+}
+
+.umaker-camp-wrapper .uec-tabs-content-container {
+  display: grid;
+}
+
+.umaker-camp-wrapper .uec-tab-content {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.umaker-camp-wrapper .uec-tab-content.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.umaker-camp-wrapper .uec-tab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  background-color: var(--color-card-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-premium-sm);
+  height: 100%;
+}
+
+.umaker-camp-wrapper .uec-tab-desc-panel {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.umaker-camp-wrapper .uec-tab-program-panel {
+  padding: 48px;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.umaker-camp-wrapper .uec-tab-program-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary-blue);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.umaker-camp-wrapper .uec-tab-program-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.umaker-camp-wrapper .uec-tab-program-list li {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 24px;
+  position: relative;
+  color: #4B4B4F;
+}
+
+.umaker-camp-wrapper .uec-tab-program-list li::before {
+  content: '\2726';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--color-orange);
+  font-size: 1.1rem;
+}
+
+.umaker-camp-wrapper .uec-tab-actions {
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+@media (max-width: 991px) {
+  .umaker-camp-wrapper .uec-tab-grid {
+    grid-template-columns: 1fr;
+  }
+  .umaker-camp-wrapper .uec-tab-program-panel {
+    padding: 32px;
+  }
+  .umaker-camp-wrapper .uec-tab-desc-panel {
+    padding: 32px;
+  }
+}
+
+/* === Modern Form Popup (Light Theme) === */
+.umaker-camp-wrapper .uec-modern-form .camp-form-group {
+  margin-bottom: 24px;
+}
+
+.umaker-camp-wrapper .uec-modern-form label {
+  color: var(--color-dark-text);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.umaker-camp-wrapper .uec-form-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.umaker-camp-wrapper .uec-col-half {
+  flex: 1;
+}
+
+.umaker-camp-wrapper .uec-modern-form .camp-form-control {
+  background-color: #F5F7FA;
+  border: 1px solid #E5E7EB;
+  color: var(--color-dark-text);
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 1rem;
+}
+
+.umaker-camp-wrapper .uec-modern-form .camp-form-control:focus {
+  border-color: var(--color-primary-blue);
+  outline: none;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(38, 1, 254, 0.1);
+}
+
+.umaker-camp-wrapper .uec-modern-form .camp-form-control::placeholder {
+  color: #A0AAB5;
+}
+
+/* Track Selection Checkbox Grid */
+.umaker-camp-wrapper .uec-track-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.umaker-camp-wrapper .uec-track-card {
+  cursor: pointer;
+  display: block;
+}
+
+.umaker-camp-wrapper .uec-track-card input[type="checkbox"] {
+  display: none;
+}
+
+.umaker-camp-wrapper .uec-track-card-inner {
+  background-color: #FFFFFF;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 20px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.umaker-camp-wrapper .uec-track-card:hover .uec-track-card-inner {
+  border-color: #CBD5E1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.umaker-camp-wrapper .uec-track-card input[type="checkbox"]:checked + .uec-track-card-inner {
+  border-color: var(--color-primary-blue);
+  background-color: rgba(38, 1, 254, 0.05);
+}
+
+.umaker-camp-wrapper .uec-track-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.umaker-camp-wrapper .uec-track-title {
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  color: var(--color-dark-text);
+}
+
+.umaker-camp-wrapper .uec-track-dates {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+.umaker-camp-wrapper .uec-form-submit-wrap {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.umaker-camp-wrapper .uec-btn-submit-modern {
+  border-radius: 50px;
+  padding: 18px 48px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  .umaker-camp-wrapper .uec-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .umaker-camp-wrapper .uec-track-selection {
+    grid-template-columns: 1fr;
+  }
+}
+
