@@ -211,6 +211,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         scrollTrigger: {
                             trigger: '.uec-stats-grid',
                             start: 'top 90%'
+                        },
+                        onComplete: () => {
+                            gsap.to(counter.closest('.uec-stat-val'), {
+                                scale: 1.08,
+                                duration: 1.2,
+                                repeat: -1,
+                                yoyo: true,
+                                ease: 'sine.inOut'
+                            });
                         }
                     }
                 );
