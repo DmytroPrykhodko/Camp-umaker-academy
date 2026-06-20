@@ -66,6 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (form) {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
+
+                // Validate at least one checkbox is checked
+                const checkboxes = form.querySelectorAll('input[name="course[]"]');
+                const isChecked = Array.from(checkboxes).some(cb => cb.checked);
+                
+                if (!isChecked) {
+                    alert('Будь ласка, оберіть хоча б один напрям (програму).');
+                    return;
+                }
+
                 const submitBtn = form.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
                 
