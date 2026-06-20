@@ -185,7 +185,20 @@
   grid-row: span 2;
   background-color: var(--color-primary-blue);
   color: var(--color-card-white);
-  min-height: 440px;
+  min-height: 480px;
+  padding: 48px;
+}
+
+@keyframes uec-swing {
+  0% { transform: rotate(-3.5deg); }
+  50% { transform: rotate(3.5deg); }
+  100% { transform: rotate(-3.5deg); }
+}
+
+.umaker-camp-wrapper .uec-swing-word {
+  display: inline-block;
+  transform-origin: center center;
+  animation: uec-swing 4s ease-in-out infinite;
 }
 
 .umaker-camp-wrapper .uec-hero-title {
@@ -195,20 +208,22 @@
   line-height: 0.95;
   letter-spacing: -0.04em;
   color: var(--color-card-white);
+  margin-bottom: 24px;
 }
 
 .umaker-camp-wrapper .uec-hero-subtitle {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-lime-green);
-  margin-top: 12px;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 
 .umaker-camp-wrapper .uec-hero-desc {
   font-size: 1.05rem;
   line-height: 1.6;
   color: rgba(255,255,255,0.85);
-  margin: 24px 0 32px;
+  margin: 0 0 40px;
   max-width: 620px;
 }
 
@@ -223,7 +238,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 210px;
 }
 
 .umaker-camp-wrapper .uec-bento-age {
@@ -246,7 +260,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 210px;
 }
 
 .umaker-camp-wrapper .uec-bento-star {
@@ -268,7 +281,6 @@
   padding: 0;
   overflow: hidden;
   position: relative;
-  min-height: 440px;
   border: 1px solid var(--color-gray-border);
 }
 
