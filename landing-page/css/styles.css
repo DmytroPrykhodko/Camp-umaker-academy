@@ -867,13 +867,43 @@
 /* === Team / Mentors === */
 .umaker-camp-wrapper .uec-mentors-swiper {
   margin-top: 40px;
-  padding-bottom: 50px; /* space for pagination */
+  padding: 0 50px 50px;
+  position: relative;
 }
 .umaker-camp-wrapper .uec-mentors-swiper .swiper-wrapper {
   align-items: stretch;
 }
 .umaker-camp-wrapper .swiper-pagination-bullet-active {
   background: var(--color-primary-blue);
+}
+
+/* Slider navigation arrows */
+.umaker-camp-wrapper .swiper-button-prev,
+.umaker-camp-wrapper .swiper-button-next {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: var(--color-primary-blue) !important;
+  transition: var(--transition);
+}
+.umaker-camp-wrapper .swiper-button-prev:hover,
+.umaker-camp-wrapper .swiper-button-next:hover {
+  background: var(--color-primary-blue);
+  color: var(--color-card-white) !important;
+  box-shadow: 0 4px 16px rgba(38, 1, 254, 0.3);
+}
+.umaker-camp-wrapper .swiper-button-prev::after,
+.umaker-camp-wrapper .swiper-button-next::after {
+  font-size: 1rem;
+  font-weight: 800;
+}
+.umaker-camp-wrapper .swiper-button-prev {
+  left: 0;
+}
+.umaker-camp-wrapper .swiper-button-next {
+  right: 0;
 }
 
 .umaker-camp-wrapper .uec-mentor-card {
@@ -920,20 +950,20 @@
 }
 
 .umaker-camp-wrapper .uec-mentor-role {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-orange);
   text-transform: uppercase;
   margin-bottom: 12px;
   letter-spacing: 0.03em;
-  height: 85px;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .umaker-camp-wrapper .uec-mentor-focus {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   line-height: 1.5;
   color: var(--color-primary-blue);
   background-color: rgba(38, 1, 254, 0.05);
@@ -1205,15 +1235,7 @@
   color: var(--color-lime-green);
 }
 
-@keyframes uec-float-bubble {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
 
-.umaker-camp-wrapper .uec-animate-float {
-  animation: uec-float-bubble 4s ease-in-out infinite;
-}
 
 /* === FAQ Sections === */
 .umaker-camp-wrapper .uec-faq-categories {
@@ -1229,6 +1251,17 @@
   border-bottom: 2px solid var(--color-primary-blue);
   padding-bottom: 8px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.umaker-camp-wrapper .uec-faq-icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .umaker-camp-wrapper .uec-faq-items {
@@ -1287,6 +1320,25 @@
 /* === Participant Steps === */
 .umaker-camp-wrapper .uec-participant-steps {
   margin-bottom: 40px;
+  position: relative;
+}
+
+/* Dotted connector line between steps */
+.umaker-camp-wrapper .uec-participant-steps .uec-card-step {
+  position: relative;
+}
+.umaker-camp-wrapper .uec-participant-steps .uec-card-step::after {
+  content: '';
+  position: absolute;
+  top: 58px; /* middle of the circle */
+  right: -10px;
+  width: calc(100% - 80px);
+  height: 0;
+  border-top: 3px dashed rgba(38, 1, 254, 0.25);
+  transform: translateX(50%);
+}
+.umaker-camp-wrapper .uec-participant-steps .uec-card-step:last-child::after {
+  display: none;
 }
 
 .umaker-camp-wrapper .uec-card-step {
@@ -1295,8 +1347,8 @@
 }
 
 .umaker-camp-wrapper .uec-step-circle {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background-color: var(--color-primary-blue);
   color: var(--color-card-white);
@@ -1304,8 +1356,11 @@
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 18px;
+  box-shadow: 0 4px 12px rgba(38, 1, 254, 0.25);
+  position: relative;
+  z-index: 2;
 }
 
 .umaker-camp-wrapper .uec-step-text {
@@ -1313,6 +1368,12 @@
   font-size: 0.95rem;
   color: var(--color-dark-text);
   line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .umaker-camp-wrapper .uec-participant-steps .uec-card-step::after {
+    display: none;
+  }
 }
 
 /* === Conditions / Pricing Block === */
