@@ -243,6 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const bioText = card.querySelector('.uec-mentor-text-content').innerHTML;
 
                         document.getElementById('bio-modal-img').src = img;
+                        
                         document.getElementById('bio-modal-name').innerHTML = name;
                         document.getElementById('bio-modal-role').innerHTML = role;
                         document.getElementById('bio-modal-text').innerHTML = bioText;

@@ -1682,46 +1682,92 @@
 }
 
 /* === Mentor Bio Popup Modal === */
+.umaker-camp-wrapper .camp-popup--bio {
+  max-width: 860px;
+  padding: 0;
+  overflow: hidden;
+}
+
 .umaker-camp-wrapper .camp-bio-popup {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 16px;
+  flex-direction: row;
+  align-items: stretch;
+  text-align: left;
+  gap: 0;
+}
+
+.umaker-camp-wrapper .camp-bio-img-wrap {
+  flex: 1;
+  min-width: 40%;
+  max-width: 45%;
 }
 
 .umaker-camp-wrapper .camp-bio-popup img {
-  width: 140px;
-  height: 140px;
-  border-radius: var(--border-radius-sm);
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin-bottom: 8px;
+  object-position: center 20%;
+  display: block;
+  border-radius: 0;
+}
+
+.umaker-camp-wrapper .camp-bio-content-wrap {
+  flex: 1;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .umaker-camp-wrapper .camp-bio-name {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  color: var(--color-dark-text);
 }
 
 .umaker-camp-wrapper .camp-bio-role {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--color-orange);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-primary-blue);
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
 }
 
 .umaker-camp-wrapper .camp-bio-text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--color-dark-text);
-  text-align: left;
   background-color: rgba(38, 1, 254, 0.05);
-  padding: 20px;
+  padding: 24px;
   border-radius: var(--border-radius-sm);
   border-left: 3px solid var(--color-primary-blue);
-  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .umaker-camp-wrapper .camp-bio-popup {
+    flex-direction: column;
+  }
+  .umaker-camp-wrapper .camp-bio-img-wrap {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+  }
+  .umaker-camp-wrapper .camp-bio-popup img {
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    background-color: #f1f3f4;
+  }
+  .umaker-camp-wrapper .camp-bio-content-wrap {
+    padding: 32px 24px;
+  }
+  .umaker-camp-wrapper .camp-bio-name {
+    font-size: 1.75rem;
+  }
 }
 /* === Flip Card Animation === */
 .umaker-camp-wrapper .uec-flip-card {
