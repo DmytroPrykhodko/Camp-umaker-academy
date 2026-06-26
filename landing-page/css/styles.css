@@ -1685,7 +1685,8 @@
 .umaker-camp-wrapper .camp-popup--bio {
   max-width: 860px;
   padding: 0;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .umaker-camp-wrapper .camp-bio-popup {
@@ -1753,14 +1754,13 @@
   .umaker-camp-wrapper .camp-bio-img-wrap {
     min-width: 100%;
     max-width: 100%;
-    height: auto;
-    max-height: 50vh;
+    height: 250px;
   }
   .umaker-camp-wrapper .camp-bio-popup img {
-    height: auto;
-    max-height: 50vh;
-    object-fit: contain;
-    background-color: #f1f3f4;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    background-color: transparent;
   }
   .umaker-camp-wrapper .camp-bio-content-wrap {
     padding: 32px 24px;
