@@ -290,6 +290,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+
+        // 7.5. Initialize Hero Swiper
+        if (typeof Swiper !== 'undefined' && document.querySelector('.uec-hero-swiper')) {
+            new Swiper('.uec-hero-swiper', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                loop: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                allowTouchMove: false,
+                speed: 1000,
+            });
+        }
         // 8. Tab Switching Logic for Challenges Section
         const tabBtns = document.querySelectorAll('.uec-tabs-nav .uec-tab-btn');
         tabBtns.forEach(btn => {
