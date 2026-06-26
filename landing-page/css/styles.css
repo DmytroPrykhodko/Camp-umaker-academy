@@ -217,10 +217,10 @@
 
 .umaker-camp-wrapper .uec-bento-card--large-blue {
   grid-column: span 6;
-  grid-row: span 3;
+  grid-row: span 1;
   background-color: var(--color-primary-blue);
   color: var(--color-card-white);
-  min-height: 520px;
+  min-height: 480px;
   padding: 48px;
   border: none;
 }
@@ -273,7 +273,7 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--logos {
-  grid-column: span 3;
+  grid-column: span 12;
   grid-row: span 1;
   background-color: var(--color-card-white);
   border: 1px solid var(--color-gray-border);
@@ -303,7 +303,7 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--small-blue {
-  grid-column: span 3;
+  grid-column: span 6;
   grid-row: span 1;
   background-color: var(--color-primary-blue);
   color: var(--color-card-white);
@@ -333,7 +333,7 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--small-orange {
-  grid-column: span 3;
+  grid-column: span 6;
   grid-row: span 1;
   background-color: var(--color-orange);
   color: var(--color-card-white);
@@ -363,8 +363,8 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--photo {
-  grid-column: span 3;
-  grid-row: span 3;
+  grid-column: span 6;
+  grid-row: span 1;
   padding: 0;
   overflow: hidden;
   position: relative;
