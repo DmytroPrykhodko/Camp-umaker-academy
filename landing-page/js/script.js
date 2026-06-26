@@ -16,11 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
         openBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                // Set challenge selector value if provided in the button attribute
+                // Auto-select corresponding checkbox
                 const course = btn.getAttribute('data-course');
-                if (course && document.getElementById('campCourse')) {
-                    document.getElementById('campCourse').value = course;
+                const checkboxes = document.querySelectorAll('input[name="course[]"]');
+                
+                // Clear all checkboxes first
+                checkboxes.forEach(cb => cb.checked = false);
+                
+                // Check the specific one if course is provided
+                if (course) {
+                    const targetCheckbox = document.querySelector(`input[name="course[]"][value="${course}"]`);
+                    if (targetCheckbox) {
+                        targetCheckbox.checked = true;
+                    }
                 }
+                
                 popupOverlay.classList.add('active');
                 if (lenis) lenis.stop(); // Stop scroll when modal is active
             });
