@@ -216,13 +216,16 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--large-blue {
-  grid-column: span 6;
+  grid-column: span 5;
   grid-row: span 1;
   background-color: var(--color-primary-blue);
   color: var(--color-card-white);
   min-height: 480px;
   padding: 48px;
   border: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .umaker-camp-wrapper .uec-bento-card--large-blue:hover {
@@ -264,12 +267,12 @@
   font-size: 1.05rem;
   line-height: 1.6;
   color: rgba(255,255,255,0.85);
-  margin: 0 0 40px;
+  margin: 0 auto 40px;
   max-width: 620px;
 }
 
 .umaker-camp-wrapper .uec-bento-card--large-blue .uec-btn {
-  align-self: flex-start;
+  align-self: center;
 }
 
 .umaker-camp-wrapper .uec-bento-card--logos {
@@ -303,7 +306,7 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--small-blue {
-  grid-column: span 6;
+  grid-column: span 7;
   grid-row: span 1;
   background-color: var(--color-primary-blue);
   color: var(--color-card-white);
@@ -333,7 +336,7 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--small-orange {
-  grid-column: span 6;
+  grid-column: span 5;
   grid-row: span 1;
   background-color: var(--color-orange);
   color: var(--color-card-white);
@@ -363,7 +366,7 @@
 }
 
 .umaker-camp-wrapper .uec-bento-card--photo {
-  grid-column: span 6;
+  grid-column: span 7;
   grid-row: span 1;
   padding: 0;
   overflow: hidden;
@@ -540,15 +543,15 @@
     min-height: auto;
   }
   .umaker-camp-wrapper .uec-bento-card--logos {
-    grid-column: span 4;
+    grid-column: span 12;
     grid-row: span 1;
   }
   .umaker-camp-wrapper .uec-bento-card--small-blue {
-    grid-column: span 4;
+    grid-column: span 6;
     grid-row: span 1;
   }
   .umaker-camp-wrapper .uec-bento-card--small-orange {
-    grid-column: span 4;
+    grid-column: span 6;
     grid-row: span 1;
   }
   .umaker-camp-wrapper .uec-bento-card--photo {
@@ -561,9 +564,6 @@
     padding: 24px;
     gap: 20px;
   }
-}
-
-@media (max-width: 768px) {
   .umaker-camp-wrapper .uec-dates-timeline {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -673,7 +673,7 @@
 
 @media (max-width: 991px) {
   .umaker-camp-wrapper .uec-grid-three {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
   .umaker-camp-wrapper .uec-grid-four {
     grid-template-columns: repeat(2, 1fr);
@@ -1510,13 +1510,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .umaker-camp-wrapper .uec-cond-right-col .uec-cond-list-col {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .umaker-camp-wrapper .uec-cond-right-col .uec-cond-list-col ul {
@@ -2150,13 +2150,16 @@
   font-size: 1rem;
 }
 
+@media (max-width: 991px) {
+  .umaker-camp-wrapper .uec-track-selection {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   .umaker-camp-wrapper .uec-form-row {
     flex-direction: column;
     gap: 0;
-  }
-  .umaker-camp-wrapper .uec-track-selection {
-    grid-template-columns: 1fr;
   }
 }
 
