@@ -942,6 +942,8 @@
   border-radius: var(--border-radius-sm);
   background-size: cover;
   background-position: center;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .umaker-camp-wrapper .uec-mentor-content {
