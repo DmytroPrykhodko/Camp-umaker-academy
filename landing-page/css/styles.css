@@ -579,6 +579,19 @@
   .umaker-camp-wrapper .uec-bento-card--small-orange {
     grid-column: span 12;
   }
+  
+  .umaker-camp-wrapper .uec-bento-card--large-blue {
+    padding: 32px 24px;
+  }
+  
+  .umaker-camp-wrapper .uec-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .umaker-camp-wrapper .camp-bio-img-wrap {
+    height: 250px;
+  }
 }
 
 /* === Mentors Layout Updates === */
