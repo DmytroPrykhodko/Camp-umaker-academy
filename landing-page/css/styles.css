@@ -118,6 +118,7 @@
   letter-spacing: 0.03em;
   position: relative;
   overflow: hidden;
+  -webkit-text-fill-color: var(--color-dark-text);
 }
 
 .umaker-camp-wrapper .uec-btn::after {
@@ -312,7 +313,7 @@
   width: auto;
   max-width: 140px;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.9));
+  mix-blend-mode: difference;
 }
 
 .umaker-camp-wrapper .uec-logo-divider {
