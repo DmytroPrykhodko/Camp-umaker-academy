@@ -1,0 +1,16 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Це кастомна лендінгова сторінка для екоінтенсиву Академії U: maker. Сторінка розроблена спеціально для інтеграції в існуючий сайт на WordPress. Вона дотримується візуального стилю бренду U: maker (використані корпоративні кольори, сучасна типографіка та скруглення).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "sharp": "^0.35.2"
+  }
+}
