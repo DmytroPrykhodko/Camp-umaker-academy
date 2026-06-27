@@ -167,6 +167,13 @@
   max-width: 440px;
 }
 
+@media (max-width: 640px) {
+  .umaker-camp-wrapper .uec-btn--lg {
+    padding: 16px 20px;
+    font-size: 1rem;
+  }
+}
+
 /* === Badge Top === */
 .umaker-camp-wrapper .uec-badge-container {
   display: flex;
@@ -512,6 +519,7 @@
   color: var(--color-orange);
   background-image: linear-gradient(0deg, var(--color-orange), var(--color-orange));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
@@ -522,6 +530,7 @@
   color: var(--color-primary-blue);
   background-image: linear-gradient(0deg, var(--color-primary-blue), var(--color-primary-blue));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.01em;
 }
@@ -547,6 +556,7 @@
   color: var(--color-lime-green);
   background-image: linear-gradient(0deg, var(--color-lime-green), var(--color-lime-green));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -559,6 +569,7 @@
   color: var(--color-primary-blue);
   background-image: linear-gradient(0deg, var(--color-primary-blue), var(--color-primary-blue));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1630,22 +1641,41 @@
   justify-content: center;
 }
 
-@keyframes pulseGlow {
+@keyframes pulseGlowPseudo {
   0% {
-    box-shadow: 0 0 0 0 rgba(200, 255, 0, 0.7);
+    transform: scale(1);
+    opacity: 0.5;
   }
 
   70% {
-    box-shadow: 0 0 0 15px rgba(200, 255, 0, 0);
+    transform: scale(1.05, 1.25);
+    opacity: 0;
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(200, 255, 0, 0);
+    transform: scale(1);
+    opacity: 0;
   }
 }
 
 .umaker-camp-wrapper .uec-btn-pulse {
-  animation: pulseGlow 2s infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.umaker-camp-wrapper .uec-btn-pulse::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: inherit;
+  background-color: var(--color-lime-green);
+  z-index: -1;
+  animation: pulseGlowPseudo 2s infinite;
+  pointer-events: none;
 }
 
 .umaker-camp-wrapper .uec-floating-btn {
