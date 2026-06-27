@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/styles.css?v=1.1">
+  <link rel="preload" as="image" href="images/UmakerAcademy/u%20(28).webp">
   <script>document.documentElement.classList.add('js-loading');</script>
   <style>
     /* Prevent FOUC for GSAP animated elements */
@@ -44,7 +45,7 @@
 
         <!-- Logos Bento Card -->
         <div class="uec-bento-card uec-bento-card--logos">
-          <img src="images/logo.U-white.png" alt="U:maker" class="uec-bento-logo" loading="lazy">
+          <img src="images/logo.U-white.png" alt="U:maker" class="uec-bento-logo">
         </div>
 
         <!-- Big Blue Bento Card -->
@@ -63,7 +64,7 @@
           <div class="swiper uec-hero-swiper" style="width: 100%; height: 100%;">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="images/UmakerAcademy/u (28).webp" alt="Еко Табір Академія"
-                  class="uec-bento-img" loading="lazy"></div>
+                  class="uec-bento-img"></div>
               <div class="swiper-slide"><img src="images/UmakerAcademy/u (35).webp" alt="Еко Табір Академія"
                   class="uec-bento-img" loading="lazy"></div>
               <div class="swiper-slide"><img src="images/UmakerAcademy/u (114).webp" alt="Еко Табір Академія"
@@ -903,10 +904,10 @@
   <!-- END UMAKER CAMP WRAPPER -->
 
   <!-- GSAP, ScrollTrigger, and Lenis for premium animations and smooth scrolling -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 
 </html>
