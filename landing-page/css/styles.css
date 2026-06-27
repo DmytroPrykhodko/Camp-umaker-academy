@@ -307,19 +307,12 @@
   box-shadow: var(--shadow-premium-lg);
 }
 
-.umaker-camp-wrapper .uec-bento-logo-mask {
-  width: 140px;
+.umaker-camp-wrapper .uec-bento-logo {
   height: 64px;
-  background-color: #0e0e10;
-  -webkit-mask-image: url('../images/logo.U.png');
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-image: url('../images/logo.U.png');
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-composite: luminance;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.9));
 }
 
 .umaker-camp-wrapper .uec-logo-divider {
