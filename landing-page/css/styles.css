@@ -310,12 +310,6 @@
   object-fit: contain;
 }
 
-@media (prefers-color-scheme: dark) {
-  .umaker-camp-wrapper .uec-bento-logo {
-    filter: invert(1) brightness(1.5);
-  }
-}
-
 .umaker-camp-wrapper .uec-logo-divider {
   font-size: 1.35rem;
   font-weight: 700;
