@@ -15,13 +15,13 @@
   --color-light-gray: #F5F7F8;
   --color-gray-border: #E8ECEE;
   --font-family: 'Manrope', sans-serif;
-  
+
   --border-radius-lg: 24px;
   --border-radius-sm: 16px;
   --border-radius-pill: 9999px;
   --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-spring: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
-  
+
   --shadow-premium-sm: 0 2px 8px rgba(14, 14, 16, 0.03), 0 4px 16px rgba(14, 14, 16, 0.02);
   --shadow-premium-md: 0 8px 20px rgba(14, 14, 16, 0.04), 0 16px 40px rgba(14, 14, 16, 0.03);
   --shadow-premium-lg: 0 20px 40px rgba(14, 14, 16, 0.06), 0 40px 80px rgba(14, 14, 16, 0.06);
@@ -85,12 +85,15 @@
 .umaker-camp-wrapper .uec-text-lime {
   color: var(--color-lime-green);
 }
+
 .umaker-camp-wrapper .uec-text-lime-neon {
   color: var(--color-lime-green);
 }
+
 .umaker-camp-wrapper .uec-text-blue {
   color: var(--color-primary-blue);
 }
+
 .umaker-camp-wrapper .uec-text-orange {
   color: var(--color-orange);
 }
@@ -177,7 +180,7 @@
   border-radius: var(--border-radius-pill);
   font-weight: 800;
   font-size: 0.9rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   border: 1px solid var(--color-gray-border);
 }
 
@@ -234,9 +237,17 @@
 }
 
 @keyframes uec-swing {
-  0% { transform: rotate(-3.5deg); }
-  50% { transform: rotate(3.5deg); }
-  100% { transform: rotate(-3.5deg); }
+  0% {
+    transform: rotate(-3.5deg);
+  }
+
+  50% {
+    transform: rotate(3.5deg);
+  }
+
+  100% {
+    transform: rotate(-3.5deg);
+  }
 }
 
 .umaker-camp-wrapper .uec-swing-word {
@@ -266,7 +277,7 @@
 .umaker-camp-wrapper .uec-hero-desc {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   margin: 0 auto 40px;
   max-width: 620px;
 }
@@ -297,6 +308,12 @@
   width: auto;
   max-width: 140px;
   object-fit: contain;
+}
+
+@media (prefers-color-scheme: dark) {
+  .umaker-camp-wrapper .uec-bento-logo {
+    filter: invert(1) brightness(1.5);
+  }
 }
 
 .umaker-camp-wrapper .uec-logo-divider {
@@ -518,6 +535,7 @@
 .umaker-camp-wrapper .uec-status-open {
   color: #00C853;
 }
+
 .umaker-camp-wrapper .uec-status-open::before {
   background-color: #00C853;
 }
@@ -525,6 +543,7 @@
 .umaker-camp-wrapper .uec-status-popular {
   color: var(--color-primary-blue);
 }
+
 .umaker-camp-wrapper .uec-status-popular::before {
   background-color: var(--color-primary-blue);
 }
@@ -532,6 +551,7 @@
 .umaker-camp-wrapper .uec-status-limited {
   color: var(--color-orange);
 }
+
 .umaker-camp-wrapper .uec-status-limited::before {
   background-color: var(--color-orange);
 }
@@ -542,53 +562,61 @@
     grid-row: span 1;
     min-height: auto;
   }
+
   .umaker-camp-wrapper .uec-bento-card--logos {
     grid-column: span 12;
     grid-row: span 1;
   }
+
   .umaker-camp-wrapper .uec-bento-card--small-blue {
     grid-column: span 6;
     grid-row: span 1;
   }
+
   .umaker-camp-wrapper .uec-bento-card--small-orange {
     grid-column: span 6;
     grid-row: span 1;
   }
+
   .umaker-camp-wrapper .uec-bento-card--photo {
     grid-column: span 12;
     grid-row: span 1;
     min-height: 320px;
   }
+
   .umaker-camp-wrapper .uec-bento-card--wide-dates {
     grid-column: span 12;
     padding: 24px;
     gap: 20px;
   }
+
   .umaker-camp-wrapper .uec-dates-timeline {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .umaker-camp-wrapper .uec-date-card {
     padding: 16px 20px;
   }
 }
 
 @media (max-width: 580px) {
+
   .umaker-camp-wrapper .uec-bento-card--logos,
   .umaker-camp-wrapper .uec-bento-card--small-blue,
   .umaker-camp-wrapper .uec-bento-card--small-orange {
     grid-column: span 12;
   }
-  
+
   .umaker-camp-wrapper .uec-bento-card--large-blue {
     padding: 32px 24px;
   }
-  
+
   .umaker-camp-wrapper .uec-btn {
     width: 100%;
     justify-content: center;
   }
-  
+
   .umaker-camp-wrapper .camp-bio-img-wrap {
     height: 250px;
   }
@@ -639,7 +667,7 @@
   transform: rotate(-2.5deg) scale(1.05);
   margin: 80px -20px 100px;
   white-space: nowrap;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -665,8 +693,13 @@
 }
 
 @keyframes ticker-slide {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 /* === Reusable Grid Layouts === */
@@ -688,12 +721,14 @@
   .umaker-camp-wrapper .uec-grid-three {
     grid-template-columns: 1fr;
   }
+
   .umaker-camp-wrapper .uec-grid-four {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
+
   .umaker-camp-wrapper .uec-grid-three,
   .umaker-camp-wrapper .uec-grid-four {
     grid-template-columns: 1fr;
@@ -751,8 +786,9 @@
 }
 
 .umaker-camp-wrapper .uec-card--blue .uec-card-text {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
+
 .umaker-camp-wrapper .uec-card--blue .uec-card-title {
   color: var(--color-card-white);
 }
@@ -768,8 +804,9 @@
 }
 
 .umaker-camp-wrapper .uec-card--orange .uec-card-text {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
+
 .umaker-camp-wrapper .uec-card--orange .uec-card-title {
   color: var(--color-card-white);
 }
@@ -793,6 +830,7 @@
 }
 
 @media (min-width: 992px) {
+
   .umaker-camp-wrapper .uec-section--history .uec-card-title,
   .umaker-camp-wrapper .uec-section--what-awaits .uec-card-title,
   .umaker-camp-wrapper .uec-program-workshops .uec-card-title {
@@ -841,7 +879,7 @@
 
 .umaker-camp-wrapper .uec-stats-desc {
   text-align: center;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.25rem;
   max-width: 600px;
   margin: 16px auto 48px;
@@ -866,7 +904,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   letter-spacing: 0.05em;
 }
 
@@ -874,6 +912,7 @@
   .umaker-camp-wrapper .uec-stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .umaker-camp-wrapper .uec-stats-card {
     padding: 40px 24px;
   }
@@ -891,9 +930,11 @@
   padding: 0 50px 50px;
   position: relative;
 }
+
 .umaker-camp-wrapper .uec-mentors-swiper .swiper-wrapper {
   align-items: stretch;
 }
+
 .umaker-camp-wrapper .swiper-pagination-bullet-active {
   background: var(--color-primary-blue);
 }
@@ -903,26 +944,30 @@
 .umaker-camp-wrapper .swiper-button-next {
   width: 44px;
   height: 44px;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 50%;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   color: var(--color-primary-blue) !important;
   transition: var(--transition);
 }
+
 .umaker-camp-wrapper .swiper-button-prev:hover,
 .umaker-camp-wrapper .swiper-button-next:hover {
   background: var(--color-primary-blue);
   color: var(--color-card-white) !important;
   box-shadow: 0 4px 16px rgba(38, 1, 254, 0.3);
 }
+
 .umaker-camp-wrapper .swiper-button-prev::after,
 .umaker-camp-wrapper .swiper-button-next::after {
   font-size: 1rem;
   font-weight: 800;
 }
+
 .umaker-camp-wrapper .swiper-button-prev {
   left: 0;
 }
+
 .umaker-camp-wrapper .swiper-button-next {
   right: 0;
 }
@@ -932,9 +977,11 @@
   border-radius: var(--border-radius-lg);
   padding: 30px 20px;
   border: 1px solid var(--color-gray-border);
-  display: flex !important; /* Ensure it overrides any swiper defaults */
+  display: flex !important;
+  /* Ensure it overrides any swiper defaults */
   flex-direction: column;
-  height: auto !important; /* Forces swiper to stretch all slides equally */
+  height: auto !important;
+  /* Forces swiper to stretch all slides equally */
   text-align: center;
   gap: 24px;
   align-items: center;
@@ -1043,6 +1090,7 @@
     text-align: center;
     padding: 30px 20px;
   }
+
   .umaker-camp-wrapper .uec-mentor-img-placeholder {
     width: 120px;
     height: 120px;
@@ -1145,12 +1193,12 @@
 }
 
 .umaker-camp-wrapper .uec-pill-badge--yellow-text {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   color: var(--color-lime-green);
 }
 
 .umaker-camp-wrapper .uec-pill-badge--blue-text {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   color: var(--color-primary-blue);
 }
 
@@ -1166,7 +1214,7 @@
   font-size: 1.15rem;
   line-height: 1.6;
   max-width: 780px;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 32px;
 }
 
@@ -1208,9 +1256,9 @@
 
 .umaker-camp-wrapper .uec-accordion-content ul li {
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .umaker-camp-wrapper .uec-accordion-content ul li:last-child {
@@ -1315,7 +1363,7 @@
 }
 
 .umaker-camp-wrapper .uec-eco-desc {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.05rem;
   line-height: 1.6;
   max-width: 880px;
@@ -1447,8 +1495,7 @@
   line-height: 1.4;
 }
 
-@media (max-width: 640px) {
-}
+@media (max-width: 640px) {}
 
 /* === Conditions / Pricing Block === */
 .umaker-camp-wrapper .uec-conditions-box {
@@ -1482,7 +1529,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 8px;
 }
 
@@ -1507,7 +1554,7 @@
 .umaker-camp-wrapper .uec-cond-list-col ul li {
   padding: 6px 0;
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   position: relative;
   padding-left: 18px;
 }
@@ -1548,9 +1595,17 @@
 }
 
 @keyframes pulseGlow {
-  0% { box-shadow: 0 0 0 0 rgba(200, 255, 0, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(200, 255, 0, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(200, 255, 0, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(200, 255, 0, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(200, 255, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(200, 255, 0, 0);
+  }
 }
 
 .umaker-camp-wrapper .uec-btn-pulse {
@@ -1631,7 +1686,7 @@
   position: relative;
   transform: translateY(30px);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 .umaker-camp-wrapper .camp-popup-overlay.active .camp-popup {
@@ -1766,24 +1821,29 @@
     flex-direction: column;
     height: auto;
   }
+
   .umaker-camp-wrapper .camp-bio-img-wrap {
     min-width: 100%;
     max-width: 100%;
     height: 350px;
   }
+
   .umaker-camp-wrapper .camp-bio-popup img {
     height: 100%;
     max-height: none;
     object-fit: cover;
     background-color: transparent;
   }
+
   .umaker-camp-wrapper .camp-bio-content-wrap {
     padding: 32px 24px;
   }
+
   .umaker-camp-wrapper .camp-bio-name {
     font-size: 1.75rem;
   }
 }
+
 /* === Flip Card Animation === */
 .umaker-camp-wrapper .uec-flip-card {
   perspective: 1200px;
@@ -1886,7 +1946,7 @@
 
 .umaker-camp-wrapper .uec-back-content ul {
   list-style: none;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   padding: 0;
 }
 
@@ -2026,9 +2086,11 @@
   .umaker-camp-wrapper .uec-tab-grid {
     grid-template-columns: 1fr;
   }
+
   .umaker-camp-wrapper .uec-tab-program-panel {
     padding: 32px;
   }
+
   .umaker-camp-wrapper .uec-tab-desc-panel {
     padding: 32px;
   }
@@ -2104,7 +2166,7 @@
   border: 0;
 }
 
-.umaker-camp-wrapper .uec-track-card input[type="checkbox"]:focus-visible + .uec-track-card-inner {
+.umaker-camp-wrapper .uec-track-card input[type="checkbox"]:focus-visible+.uec-track-card-inner {
   outline: 2px solid var(--color-primary-blue);
   outline-offset: 2px;
   border-color: var(--color-primary-blue);
@@ -2127,10 +2189,10 @@
 .umaker-camp-wrapper .uec-track-card:hover .uec-track-card-inner {
   border-color: #CBD5E1;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.umaker-camp-wrapper .uec-track-card input[type="checkbox"]:checked + .uec-track-card-inner {
+.umaker-camp-wrapper .uec-track-card input[type="checkbox"]:checked+.uec-track-card-inner {
   border-color: var(--color-primary-blue);
   background-color: rgba(38, 1, 254, 0.05);
 }
@@ -2175,4 +2237,3 @@
     gap: 0;
   }
 }
-
